@@ -656,7 +656,7 @@ body {
     font-size: 0.8rem;
   }
   .car-image {
-    top: -3%;
+    top: 5%;
     left: -6%;
   }
   .map-bg {
@@ -746,6 +746,9 @@ body {
   .heading-secvices > h4 {
     font-size: 17px;
   }
+  .contact-card {
+    top: 106px !important;
+  }
 }
 @media screen and (max-width: 437px) {
   .heading > p {
@@ -811,5 +814,11 @@ body {
   /* footer */
   .text-white {
     font-size: 11px;
+  }
+}
+/* footer */
+@media screen and (max-width: 360px) {
+  .contact-card {
+    top: 57px !important;
   }
 }
