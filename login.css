@@ -1,13 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap");
+
 * {
-  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
   height: 100%;
   overflow-x: hidden;
+  font-family: "Poppins";
 }
 
 .login-container {
@@ -296,7 +299,7 @@ body {
   }
 }
 
-@media (max-width: 767.98px) {
+/* @media (max-width: 767.98px) {
   .login-container {
     flex-direction: column;
   }
@@ -326,18 +329,9 @@ body {
   .login-title {
     font-size: 2rem;
   }
-}
-@media screen and (max-width: 767px) {
-  .logo-container {
-    position: absolute;
-    bottom: 80%;
-    left: 49%;
-  }
-  .car-image {
-    left: 18%;
-    top: -850px;
-  }
-}
+} */
+
+/*
 @media screen and (max-width: 475px) {
   .logo-container {
     position: absolute;
@@ -356,5 +350,179 @@ body {
 
   .car-section > div {
     height: 1px !important;
+  }
+} */
+@media (max-width: 767.98px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .left-section {
+    min-height: 30vh;
+    padding: 1rem;
+  }
+
+  .vertical-text {
+    left: -122px !important;
+  }
+
+  .logo {
+    width: 100%;
+  }
+  .logo-container {
+    left: 55%;
+  }
+
+  .car-image {
+    left: -5%;
+    max-width: 100%;
+    top: -1555px;
+  }
+
+  .right-section {
+    min-height: 70vh;
+    padding: 1.5rem;
+  }
+
+  .signup-title {
+    font-size: 2rem;
+  }
+
+  .signup-form-container {
+    max-width: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .logo-container {
+    left: 39% !important;
+    bottom: 68%;
+  }
+  .car-image {
+    left: -5%;
+    max-width: 100%;
+    top: -1060px !important;
+  }
+  .vertical-text {
+    left: -204px !important;
+  }
+}
+@media (max-width: 702px) {
+  .vertical-text {
+    left: -171px !important;
+  }
+}
+@media (max-width: 633px) {
+  .vertical-text {
+    left: -137px !important;
+  }
+  .logo-container {
+    left: 45% !important;
+    bottom: 68%;
+  }
+}
+@media (max-width: 590px) {
+  .vertical-text {
+    left: -117px !important;
+  }
+  .logo-container {
+    left: 52% !important;
+  }
+  .car-image {
+    left: 7%;
+  }
+}
+@media (max-width: 575.98px) {
+  .upload-container {
+    flex-direction: column;
+  }
+
+  .upload-btn {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 571px) {
+  .car-image {
+    left: 15%;
+    max-width: 77%;
+  }
+  .vertical-text {
+    left: -91px !important;
+    height: 645px !important;
+  }
+}
+@media (max-width: 513px) {
+  .vertical-text {
+    left: -55px !important;
+    height: 645px !important;
+  }
+  .logo {
+    width: 80%;
+    left: 63% !important;
+  }
+}
+@media (max-width: 462px) {
+  .logo {
+    width: 70%;
+  }
+  .logo-container {
+    left: 73% !important;
+  }
+  .vertical-text {
+    left: -35px !important;
+    height: 645px !important;
+  }
+  .car-image {
+    left: 12%;
+    max-width: 82%;
+  }
+}
+
+@media (max-width: 360px) {
+  .logo-container {
+    left: 86%;
+  }
+  .logo {
+    width: 60%;
+    left: 72%;
+  }
+  .vertical-text {
+    left: -50px !important;
+    height: 431px !important;
+  }
+  .car-image {
+    left: 6%;
+    max-width: 91%;
+    top: -948px !important;
+  }
+  .logo-container {
+    left: 84% !important;
+  }
+  .login-subtitle {
+    font-size: 10px;
+  }
+}
+@media (max-width: 320px) {
+  .signup-subtitle {
+    font-size: 10px;
+  }
+  .logo-container {
+    left: 86%;
+  }
+  .logo {
+    width: 60%;
+    left: 72%;
+  }
+  .vertical-text {
+    left: -28px !important;
+    height: 431px !important;
+  }
+  .car-image {
+    left: 6%;
+    max-width: 91%;
+    top: -948px !important;
+  }
+  .logo-container {
+    left: 84% !important;
   }
 }

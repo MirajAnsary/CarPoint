@@ -1,0 +1,430 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+  font-family: "Poppins";
+}
+.signup-container {
+  min-height: 100vh;
+  display: flex;
+}
+
+.left-section {
+  background: #1f1f1f;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.vertical-text {
+  position: relative;
+  top: 0% !important;
+  left: -71px !important;
+  height: 945px !important;
+  color: #333;
+  white-space: nowrap;
+  z-index: 2;
+}
+.vertical-text > img {
+  object-fit: contain;
+  height: 92%;
+}
+
+.logo-container {
+  position: absolute;
+  bottom: 69%;
+  left: 43%;
+  transform: translateX(-50%);
+  z-index: 6;
+  width: 350px;
+}
+
+.logo {
+  display: block;
+  width: 100%;
+}
+
+.logo > img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.car-section > div {
+  min-height: 2px !important;
+}
+.car-image {
+  position: relative;
+  max-width: 65%;
+  left: -8%;
+  top: -668px;
+  z-index: 5;
+}
+
+.right-section {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.signup-form-container {
+  width: 100%;
+  max-width: 500px;
+}
+
+.signup-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.signup-subtitle {
+  color: #999;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.form-control {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px 15px;
+  font-size: 0.95rem;
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+  background: white;
+}
+
+.password-container {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+.upload-container {
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+
+.upload-input {
+  flex: 1;
+}
+
+.upload-btn {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  min-width: 80px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.upload-btn:hover {
+  background: #5a6268;
+}
+
+.form-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 1.5rem 0;
+}
+
+.form-check-input {
+  margin: 0;
+  margin-top: 4px;
+}
+
+.form-check-label {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.terms-link {
+  color: #ffc107;
+  text-decoration: none;
+}
+
+.terms-link:hover {
+  color: #e0a800;
+  text-decoration: underline;
+}
+
+.signup-btn {
+  width: 100%;
+  background: #ffc107;
+  border: none;
+  color: #333;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+  background: #e0a800;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
+}
+
+.signin-text {
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.signin-link {
+  color: #ffc107;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signin-link:hover {
+  color: #e0a800;
+  text-decoration: underline;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+.is-invalid {
+  border-color: #dc3545;
+}
+@media (max-width: 1172px) {
+  .car-image {
+    left: -10%;
+    top: -668px;
+  }
+}
+@media (max-width: 1081px) {
+  .car-image {
+    left: -8%;
+    max-width: 62%;
+    top: -668px;
+  }
+  .vertical-text {
+    left: -48px !important;
+  }
+  .logo-container {
+    left: 56%;
+  }
+}
+@media (max-width: 1038px) {
+  .car-image {
+    left: -7%;
+    max-width: 62%;
+    top: -668px;
+  }
+}
+@media (max-width: 1023px) {
+  .car-image {
+    left: -5%;
+    max-width: 60%;
+    top: -668px;
+  }
+}
+@media (max-width: 991px) {
+  .car-image {
+    left: -17%;
+    max-width: 73%;
+    top: -583px;
+  }
+  .logo-container {
+    left: 62%;
+  }
+}
+@media (max-width: 922px) {
+  .logo-container {
+    left: 74%;
+  }
+  .logo {
+    width: 80%;
+  }
+}
+@media (max-width: 888px) {
+  .car-image {
+    left: -12%;
+    max-width: 68%;
+    top: -583px;
+  }
+}
+@media (max-width: 829px) {
+  .logo-container {
+    left: 80%;
+  }
+  .logo {
+    width: 72%;
+  }
+  .car-image {
+    left: -8%;
+    max-width: 64%;
+    top: -583px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .signup-container {
+    flex-direction: column;
+  }
+
+  .left-section {
+    min-height: 30vh;
+    padding: 1rem;
+  }
+
+  /* .vertical-text {
+          display: none;
+        } */
+  .vertical-text {
+    left: -122px !important;
+  }
+
+  .logo {
+    width: 100%;
+  }
+  .logo-container {
+    left: 55%;
+  }
+
+  .car-image {
+    left: -5%;
+    max-width: 100%;
+    top: -1555px;
+  }
+
+  .right-section {
+    min-height: 70vh;
+    padding: 1.5rem;
+  }
+
+  .signup-title {
+    font-size: 2rem;
+  }
+
+  .signup-form-container {
+    max-width: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .upload-container {
+    flex-direction: column;
+  }
+
+  .upload-btn {
+    min-width: 100%;
+  }
+}
+@media (max-width: 702px) {
+  .vertical-text {
+    left: -96px !important;
+  }
+}
+@media (max-width: 633px) {
+  .vertical-text {
+    left: -60px !important;
+  }
+}
+@media (max-width: 590px) {
+  .vertical-text {
+    left: -35px !important;
+  }
+  .logo-container {
+    left: 62%;
+  }
+  .car-image {
+    left: 7%;
+  }
+}
+@media (max-width: 571px) {
+  .car-image {
+    left: 25%;
+    max-width: 77%;
+    top: -1431px;
+  }
+  .vertical-text {
+    left: -28px !important;
+    height: 645px !important;
+  }
+}
+@media (max-width: 360px) {
+  .logo-container {
+    left: 86%;
+  }
+  .logo {
+    width: 60%;
+    left: 72%;
+  }
+  .vertical-text {
+    left: -28px !important;
+    height: 431px !important;
+  }
+  .car-image {
+    left: 6%;
+    max-width: 91%;
+    top: -1297px;
+  }
+  .signup-subtitle {
+    font-size: 11px;
+  }
+
+  .form-control {
+    font-size: 11px;
+  }
+}
+@media (max-width: 320px) {
+  .signup-subtitle {
+    font-size: 10px;
+  }
+}

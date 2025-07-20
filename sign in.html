@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In page</title>
+       <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./sign in.css">
+  </head>
+  <body>
+    <main class="signup-container">
+      <!-- Left Section - Black Background with Logo and Car -->
+      <section class="col-md-6 left-section">
+        <div class="container"> 
+        <div class="vertical-text">
+          <img src="../assets/CarPoint-White Logo 5.png" alt="" />
+        </div>
+
+        <div class="logo-container">
+          <a href="./index.html">
+       <img src="../assets/car point6 logo.JPG" alt="" class="logo" />
+
+          </a>
+        </div>
+
+        <!-- <div class="car-container"></div> -->
+      </section>
+
+      <!-- Right Section - Sign Up Form -->
+      <section class="col-md-6 right-section">
+        <div class="signup-form-container">
+          <h1 class="signup-title">Sign Up</h1>
+          <p class="signup-subtitle">
+            Lorem ipsum dolor sit amet consectetur volutpat eu.
+          </p>
+
+          <!-- Sign Up Form -->
+          <form id="signupForm" novalidate>
+            <div class="container-fluid p-0">
+              <!-- First Name and Last Name Row -->
+              <div class="row g-3 mb-3">
+                <div class="col-6">
+                  <label for="firstName" class="form-label">First Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    placeholder="Enter First Name"
+                    required
+                  />
+                  <div class="error-message" id="firstNameError">
+                    First name is required
+                  </div>
+                </div>
+                <div class="col-6">
+                  <label for="lastName" class="form-label">Last Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    placeholder="Enter Last Name"
+                    required
+                  />
+                  <div class="error-message" id="lastNameError">
+                    Last name is required
+                  </div>
+                </div>
+              </div>
+
+              <!-- Email Address -->
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter Email Address"
+                  required
+                />
+                <div class="error-message" id="emailError">
+                  Please enter a valid email address
+                </div>
+              </div>
+
+              <!-- Address -->
+              <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="address"
+                  placeholder="Enter Address"
+                  required
+                />
+                <div class="error-message" id="addressError">
+                  Address is required
+                </div>
+              </div>
+
+              <!-- Driving License Number -->
+              <div class="mb-3">
+                <label for="licenseNumber" class="form-label"
+                  >Driving License Number</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="licenseNumber"
+                  placeholder="Enter License Number"
+                  required
+                />
+                <div class="error-message" id="licenseNumberError">
+                  Driving license number is required
+                </div>
+              </div>
+
+              <!-- Upload Driving License -->
+              <div class="mb-3">
+                <label for="licenseUpload" class="form-label"
+                  >Upload Driving License</label
+                >
+                <div class="upload-container">
+                  <input
+                    type="text"
+                    class="form-control upload-input"
+                    id="uploadDisplay"
+                    placeholder="Maximum Size 5MB"
+                    readonly
+                  />
+                  <input
+                    type="file"
+                    class="d-none"
+                    id="licenseUpload"
+                    accept=".jpg,.jpeg,.png,.pdf"
+                    required
+                  />
+                  <button
+                    type="button"
+                    class="upload-btn"
+                    onclick="document.getElementById('licenseUpload').click()"
+                  >
+                    Upload
+                  </button>
+                </div>
+                <div class="error-message" id="uploadError">
+                  Please upload your driving license
+                </div>
+              </div>
+
+              <!-- Password -->
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <div class="password-container">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    placeholder="Enter Password"
+                    required
+                  />
+                  <button
+                    type="button"
+                    class="password-toggle"
+                    id="passwordToggle"
+                  >
+                    <i class="bi bi-eye" id="passwordIcon"></i>
+                  </button>
+                </div>
+                <div class="error-message" id="passwordError">
+                  Password must be at least 6 characters
+                </div>
+              </div>
+
+              <!-- Confirm Password -->
+              <div class="mb-3">
+                <label for="confirmPassword" class="form-label"
+                  >Confirm Password</label
+                >
+                <div class="password-container">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="confirmPassword"
+                    placeholder="Confirm Password"
+                    required
+                  />
+                  <button
+                    type="button"
+                    class="password-toggle"
+                    id="confirmPasswordToggle"
+                  >
+                    <i class="bi bi-eye" id="confirmPasswordIcon"></i>
+                  </button>
+                </div>
+                <div class="error-message" id="confirmPasswordError">
+                  Passwords do not match
+                </div>
+              </div>
+
+              <!-- Terms and Conditions -->
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="acceptTerms"
+                  required
+                />
+                <label class="form-check-label" for="acceptTerms">
+                  Accept
+                  <a href="#" class="terms-link"
+                    >terms & conditions and privacy policy</a
+                  >
+                  of Mobycar24
+                </label>
+                <div class="error-message" id="termsError">
+                  You must accept the terms and conditions
+                </div>
+              </div>
+
+              <!-- Sign Up Button -->
+              <button type="submit" class="signup-btn">Sign Up</button>
+            </div>
+          </form>
+
+          <!-- Sign In Link -->
+          <p class="signin-text">
+            Already have an account? <a href="./login.html" class="signin-link">Sign In</a>
+          </p>
+        </div>
+        </div>
+      </section>
+    </main>
+    <section class="car-section">
+      <div class="container">
+        <img
+          src="../assets/pngimg.com - land_rover_PNG80 2.png"
+          alt=""
+          class="car-image"
+        />
+      </div>
+    </section>
+  </body>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script src="./singn.js"></script>
+</html>
