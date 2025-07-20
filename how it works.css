@@ -1,0 +1,981 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+
+.banner-container {
+  max-width: 1327px;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* Scroll-lock class */
+.no-scroll {
+  overflow: hidden !important;
+  height: 100vh;
+}
+
+/* ================header-section================ */
+
+#header {
+  width: 100%;
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  background: transparent;
+  transition: top 0.5s ease;
+}
+#header .navbar {
+  padding: 15px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-nav {
+  padding-top: 15px;
+}
+/* Logo */
+.navbar-brand {
+  max-width: 150px;
+  height: 50px;
+  padding-top: 20px;
+}
+.navbar-brand > img {
+  width: 100%;
+  object-fit: contain;
+}
+
+/* Toggle Button */
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Nav Links */
+.nav-link-custom {
+  color: #000 !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.nav-link-custom:hover {
+  color: #f59e0b !important;
+}
+.nav-link-custom::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #fbbf24;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+.nav-link-custom:hover::after {
+  width: 50%;
+}
+.navbar-toggler i {
+  font-size: 26px;
+  color: #000;
+}
+
+/* banner-section */
+.left-banner {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  width: 50%;
+  /* margin-top: 25px; */
+  padding: 10px 25px;
+  border: none;
+  font-weight: 800;
+}
+
+/* aboutus */
+.about-container1 {
+  display: flex;
+  align-items: center;
+  justify-content: end !important;
+  gap: 10px;
+  margin-left: 60px;
+}
+
+.letter1 {
+  font-size: 100px !important;
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 3px #333;
+  /* text-stroke: 3px #333; */
+  line-height: 1;
+  font-family: "Arial", sans-serif;
+  letter-spacing: 5px;
+}
+
+.letter-about {
+  font-size: 100px;
+}
+
+/* padding: 12px 32px; */
+
+/* baaner  us*/
+.us-container {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 20px;
+  padding-bottom: 30px;
+}
+
+.letter2 {
+  font-size: 160px;
+  font-weight: 900;
+  color: #ffae00;
+  line-height: 1;
+  font-family: "Arial Black", Arial, sans-serif;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.letter-us {
+  font-size: 160px;
+}
+
+.letter2:hover {
+  color: #e6d49a;
+  transition: color 0.3s ease;
+  transform: scale(1.05);
+}
+.us-container {
+  margin-right: -420px;
+  padding-bottom: 65px;
+  position: relative;
+  z-index: 2;
+}
+
+.right-banner {
+  position: relative;
+  width: 50%;
+  /* background-color: #fff4ec; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  background-color: #fff7f2;
+  padding: 10px 25px !important;
+}
+
+.map-bg {
+  width: 100%;
+  position: absolute;
+  top: 20%;
+  left: -6%;
+  object-fit: cover;
+  /* opacity: 0.15; */
+}
+.man-image {
+  position: relative;
+  max-width: 50%;
+  left: -2%;
+  top: 21%;
+  z-index: 5;
+}
+.car-section > div {
+  height: 100px !important;
+}
+.car-image {
+  position: relative;
+  max-width: 61%;
+  left: 5%;
+  top: -248px;
+  z-index: 5;
+}
+/* work-section */
+.work-step .icon-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #fff5d1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+.work-step .icon-wrapper:hover {
+  transform: scale(1.1);
+}
+.text-muted1 {
+  font-size: 12px;
+  text-align: justify;
+}
+.work-text {
+  font-size: 13px;
+}
+.text-muted2 {
+  font-size: 12px;
+}
+/* =================Why choose us section ------------*/
+.right-content {
+  max-width: 552px;
+  width: 100%;
+}
+.right-content > img {
+  width: 100%;
+  object-fit: contain;
+}
+.heading {
+  padding-bottom: 40px;
+}
+.call-image {
+  width: 50px;
+}
+.call-image {
+  object-fit: contain;
+}
+/* Review Clients  section*/
+.review-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.review-card > p {
+  font-size: 12px;
+}
+/* .swiper-button-prev,
+.swiper-button-next {
+  background: #f8f9fa;
+  border-radius: 50%;
+  padding: 10px;
+  color: #333;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+} */
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: #ffc107;
+  color: white;
+}
+.form-client {
+  max-width: 388px;
+  padding-top: 50px !important;
+}
+.form-control::placeholder {
+  color: #999;
+}
+.heading-star {
+  justify-content: space-between;
+}
+.heading-content2 > p {
+  font-size: 14px;
+}
+.right-para {
+  max-width: 450px;
+  font-size: 14px;
+}
+
+/* footer */
+.footer-cards > div {
+  height: 500px !important;
+}
+.contact-card {
+  background-color: #fdfdfd;
+  border-radius: 20px;
+  max-width: 900px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  margin: 0 auto !important;
+  position: relative;
+  top: 110px;
+  z-index: 4;
+}
+
+.btn-yellow {
+  background-color: #ffc107;
+  color: #fff;
+  font-weight: bold;
+}
+.btn-yellow:hover {
+  background-color: #e0a800;
+}
+.app-badges img {
+  width: 180px;
+  height: 120px;
+  margin-bottom: 10px;
+}
+.car-image2 {
+  max-height: 120px;
+  object-fit: contain;
+  border-radius: 10px;
+  /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); */
+}
+.text-white {
+  font-size: 13px;
+}
+.footer-dark {
+  top: 83% !important;
+}
+.right-cards h5,
+.right-cards p,
+.right-cards .app-badges {
+  width: 100%;
+}
+
+.app-badges img {
+  width: 150px;
+  height: auto;
+}
+
+.footer-dark {
+  background-color: #000;
+  color: #fff;
+  padding-top: 300px !important;
+  width: 100%;
+}
+.footer-dark a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer-dark a:hover {
+  text-decoration: underline;
+}
+.subscribe-input {
+  background-color: #333;
+  border: none;
+  color: #fff;
+  max-width: 200px;
+}
+.subscribe-input::placeholder {
+  color: #aaa;
+}
+.footer-logo span {
+  color: #ffc107;
+}
+.btn-sc {
+  max-width: 100px;
+  background-color: #ffc107;
+  padding: 7px 11px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 5px;
+}
+/* responsive */
+
+/* banner-section */
+@media (max-width: 1200px) {
+  .us-container {
+    margin-right: -385px;
+  }
+  .navbar-expand-lg .navbar-collapse {
+    margin-right: -75px;
+  }
+}
+/* why choose us */
+@media screen and (max-width: 1199.98px) {
+  #why-choose-us .col-lg-5 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 1083px) {
+  .us-container {
+    margin-right: -356px;
+  }
+  .car-section > div {
+    height: 65px !important;
+  }
+}
+@media (max-width: 1049px) {
+  .letter-about {
+    font-size: 77px !important;
+  }
+  .us-container {
+    margin-right: -395px;
+  }
+  .man-image {
+    position: relative;
+    max-width: 45%;
+    left: 10%;
+    top: 16%;
+    z-index: 5;
+  }
+  .navbar-expand-lg .navbar-collapse {
+    margin-right: -47px;
+  }
+}
+@media (max-width: 991.98px) {
+  .right-cards {
+    text-align: center; /* Center text */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+  }
+  .footer-dark {
+    top: 83% !important;
+  }
+  .right-cards h5,
+  .right-cards p,
+  .right-cards .app-badges {
+    width: 100%;
+  }
+
+  .app-badges img {
+    width: 150px;
+    height: auto;
+  }
+  /* footer */
+  .text-white {
+    font-size: 11px;
+  }
+}
+/* header-section */
+
+@media screen and (max-width: 991px) {
+  .navbar-collapse {
+    background-color: #000;
+    padding: 1rem;
+    border-radius: 15px;
+    text-align: center;
+    z-index: 999;
+  }
+
+  .navbar-nav .nav-link {
+    color: white !important;
+  }
+
+  body {
+    overflow-y: auto !important;
+  }
+  .heading-content > p {
+    font-size: 12px;
+  }
+  .heading-rvw {
+    text-align: center;
+  }
+  .navbar-collapse {
+    background-color: #000; /* Matches left banner color */
+    padding: 1rem;
+    border-radius: 15px;
+    z-index: 999;
+  }
+
+  .navbar-nav .nav-link {
+    color: white !important;
+  }
+
+  body.offcanvas-backdrop {
+    overflow-y: auto !important;
+  }
+  /* banner-section */
+  .contact-card {
+    top: 33px !important;
+  }
+  /* banner-section */
+  .car-image {
+    max-width: 82%;
+    left: -11%;
+    top: -254px;
+  }
+  .man-image {
+    max-width: 49%;
+    left: 19%;
+    top: 16%;
+  }
+  .map-bg {
+    top: 11%;
+    left: -6%;
+  }
+  .heading-content2 > p {
+    font-size: 12px;
+  }
+  .footer-cards > div {
+    height: 650px !important;
+  }
+}
+
+/* banner-section */
+@media (max-width: 963px) {
+  .us-container {
+    margin-right: -311px;
+  }
+
+  .map-bg {
+    width: 92%;
+    top: 17%;
+    left: -3%;
+    /* opacity: 0.15; */
+  }
+  .man-image {
+    max-width: 70%;
+    left: 2%;
+    top: 22%;
+  }
+}
+@media (max-width: 947px) {
+  .left-banner h1 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 933px) {
+  .about-container1 {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 853px) {
+  .navbar-toggler i {
+    color: #fff !important;
+    padding-top: 20px;
+  }
+  .navbar-brand {
+    max-width: 150px;
+    height: 50px;
+    padding-top: 20px;
+  }
+  .us-container {
+    margin-right: -154px !important;
+  }
+  .car-image {
+    max-width: 54% !important;
+    left: -11%;
+    top: -196px;
+  }
+  .man-image {
+    max-width: 35% !important;
+    left: 21%;
+    top: 24%;
+  }
+  .left-banner,
+  .right-banner {
+    width: 100%;
+    padding: 77px 2px;
+    min-height: 524px !important;
+    text-align: center;
+  }
+
+  .left-banner h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Banner-section */
+@media (max-width: 768px) {
+  .letter1 {
+    font-size: 80px !important;
+    -webkit-text-stroke: 2px #333;
+    /* text-stroke: 2px #333; */
+    letter-spacing: 3px;
+  }
+  .letter2 {
+    font-size: 140px;
+    gap: 15px;
+  }
+
+  .us-container {
+    gap: 15px;
+  }
+  /* why choose us */
+  .right-content {
+    margin-top: 30px;
+  }
+  .right-content img {
+    width: 100%;
+    height: auto;
+  }
+  .heading {
+    padding-bottom: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .text-muted1 {
+    text-align: center;
+  }
+  .heading-content2 > p {
+    font-size: 9px;
+  }
+  /* foote-section */
+  footer .col-md-4 {
+    text-align: center;
+  }
+  footer .d-flex.gap-3 {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 739px) {
+  .letter2 {
+    font-size: 115px !important;
+  }
+  .us-container {
+    margin-right: -93px !important;
+  }
+  .car-section > div {
+    height: 1px !important;
+  }
+  .car-image {
+    max-width: 54% !important;
+    left: -11%;
+    top: -155px;
+  }
+  .man-image {
+    max-width: 35% !important;
+    left: 21%;
+    top: 28%;
+  }
+}
+@media (max-width: 730px) {
+  .map-bg {
+    top: 17%;
+    left: -2%;
+  }
+}
+@media (max-width: 638px) {
+  .man-image {
+    max-width: 35% !important;
+    left: 21%;
+    top: 31%;
+  }
+  .map-bg {
+    top: 20%;
+    left: -2%;
+  }
+}
+@media (max-width: 612px) {
+  .letter1 {
+    font-size: 60px !important;
+  }
+}
+@media (max-width: 573px) {
+  .car-image {
+    max-width: 54% !important;
+    left: -1%;
+    top: -195px;
+  }
+
+  .man-image {
+    max-width: 35% !important;
+    left: 22%;
+    top: 14%;
+  }
+  .map-bg {
+    top: 1%;
+    left: -2%;
+  }
+}
+@media (max-width: 591px) {
+  .man-image {
+    max-width: 35% !important;
+    left: 21%;
+    top: 33%;
+  }
+  .car-image {
+    max-width: 54% !important;
+    left: -9%;
+    top: -155px;
+  }
+  .map-bg {
+    top: 26%;
+    left: -2%;
+  }
+}
+@media (max-width: 574px) {
+  .map-bg {
+    top: 14%;
+    left: 2%;
+  }
+
+  .right-banner {
+    padding: 2px 2px;
+    min-height: 400px !important;
+  }
+  .car-image {
+    max-width: 54% !important;
+    left: -1%;
+    top: -155px;
+  }
+  .man-image {
+    max-width: 35% !important;
+    left: 21%;
+    top: 28%;
+  }
+}
+@media screen and (max-width: 528px) {
+  .text-muted2 {
+    font-size: 10px;
+  }
+  .man-image {
+    max-width: 35% !important;
+    left: 21%;
+    top: 30%;
+  }
+}
+@media (max-width: 519px) {
+  .letter1 {
+    font-size: 45px !important;
+  }
+  .letter2 {
+    font-size: 80px !important;
+  }
+}
+@media screen and (max-width: 508px) {
+  .heading-content2 > p {
+    font-size: 8px;
+  }
+}
+@media (max-width: 480px) {
+  .letter1 {
+    font-size: 40px !important;
+    -webkit-text-stroke: 2px #333;
+    /* text-stroke: 2px #333; */
+    letter-spacing: 2px;
+  }
+  .contact-card {
+    top: 71px !important;
+  }
+  .letter2 {
+    font-size: 70px !important;
+  }
+
+  .us-container {
+    gap: 10px;
+  }
+  .us-container {
+    margin-right: 2px;
+  }
+  .car-image {
+    max-width: 54% !important;
+    left: -1%;
+    top: -138px;
+  }
+  .client-section {
+    padding-top: 0 !important;
+  }
+}
+
+/* Banner-section-responsive */
+
+@media (max-width: 474px) {
+  .map-bg {
+    top: 12%;
+    left: 0%;
+  }
+  .right-banner {
+    padding: 2px 2px;
+  }
+  .right-banner {
+    min-height: 364px !important;
+  }
+  .us-container {
+    padding-top: 20px;
+  }
+  .heading > p {
+    font-size: 9px;
+  }
+  .heading-secvices > p {
+    font-size: 12px;
+  }
+  .heading-secvices > h4 {
+    font-size: 17px;
+  }
+  .contact-card {
+    top: 106px !important;
+  }
+}
+@media screen and (max-width: 454px) {
+  .heading-content2 > p {
+    font-size: 7px;
+  }
+}
+@media screen and (max-width: 444px) {
+  .text-muted2 {
+    font-size: 9px;
+  }
+  .map-bg {
+    top: 17%;
+    left: 0%;
+  }
+  .car-image {
+    max-width: 54% !important;
+    left: -1%;
+    top: -120px;
+  }
+  .man-image {
+    max-width: 35% !important;
+    left: 21%;
+    top: 31.5%;
+  }
+}
+/* why choose us */
+@media screen and (max-width: 437px) {
+  .heading > p {
+    font-size: 8px;
+    margin-bottom: 5px !important;
+  }
+  .heading > h2 {
+    font-size: 20px;
+  }
+
+  .heading-secvices > p {
+    font-size: 10px;
+  }
+  .heading-secvices > h4 {
+    font-size: 15px;
+  }
+  .Feature {
+    padding: 0 !important;
+  }
+}
+@media (max-width: 434px) {
+  .letter1 {
+    font-size: 30px !important;
+  }
+  .us-container {
+    justify-content: center;
+  }
+  .man-image {
+    left: 22%;
+    top: 32%;
+  }
+}
+@media screen and (max-width: 402px) {
+  .text-muted2 {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .heading-content2 > p {
+    font-size: 6px;
+  }
+  .heading-content2 > h2 {
+    font-size: 20px;
+  }
+  .text-white {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 388px) {
+  .man-image {
+    left: 22%;
+    top: 34%;
+  }
+  .map-bg {
+    top: 24%;
+    left: 0%;
+  }
+  .car-image {
+    max-width: 54% !important;
+    left: 0%;
+    top: -115px;
+  }
+}
+@media screen and (max-width: 383px) {
+  .text-muted1 {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 360px) {
+  .left-banner {
+    min-height: 365px !important;
+  }
+  .map-bg {
+    width: 94%;
+    position: absolute;
+    top: 7%;
+    left: -2%;
+    object-fit: cover;
+    /* opacity: 0.15; */
+  }
+  .right-banner {
+    min-height: 261px !important;
+  }
+  .letter1 {
+    font-size: 25px !important;
+  }
+  .letter2 {
+    font-size: 55px !important;
+  }
+  .car-image {
+    max-width: 54% !important;
+    left: -1%;
+    top: -91px;
+  }
+  .man-image {
+    max-width: 35% !important;
+    left: 29%;
+    top: 29%;
+  }
+  /* work-section */
+  .text-muted2 {
+    font-size: 7px;
+  }
+  .car-section > div {
+    height: 1px !important;
+  }
+  .how-it-works {
+    padding-top: 2.5rem !important;
+    padding-bottom: 0 !important;
+  }
+  .review-card > p {
+    font-size: 11px;
+  }
+  .right-para {
+    max-width: 450px;
+    font-size: 12px;
+  }
+  .contact-card {
+    top: 57px !important;
+  }
+}
+
+@media screen and (max-width: 353px) {
+  .text-muted1 {
+    font-size: 10px;
+  }
+  .heading-content2 > p {
+    font-size: 5px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .text-muted1 {
+    font-size: 9px;
+  }
+  .man-image {
+    max-width: 35% !important;
+    left: 29%;
+    top: 31%;
+  }
+  .map-bg {
+    top: 13%;
+  }
+  .heading > p {
+    font-size: 10px;
+    margin-bottom: 5px !important;
+  }
+  .how-it-works {
+    padding-top: 1.5rem !important;
+  }
+  .review-card > p {
+    font-size: 10px;
+  }
+  .text-white {
+    font-size: 9px;
+  }
+}

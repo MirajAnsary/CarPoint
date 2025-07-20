@@ -45,6 +45,9 @@ body {
 .navbar-nav {
   padding-top: 15px;
 }
+.navbar-expand-lg .navbar-collapse {
+  margin-right: -60px !important;
+}
 /* Logo */
 .navbar-brand {
   max-width: 150px;
@@ -100,7 +103,6 @@ body {
   justify-content: end;
   min-height: 500px;
   width: 50%;
-  /* margin-top: 25px; */
   padding: 10px 25px;
   border: none;
   font-weight: 800;
@@ -110,7 +112,6 @@ body {
 .about-container1 {
   display: flex;
   align-items: center;
-  gap: 10px;
   margin-left: 60px;
 }
 
@@ -136,8 +137,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: end;
-  gap: 20px;
-  padding-bottom: 30px;
+  gap: 10px;
+  padding-bottom: 60px;
+  margin-right: -10px;
 }
 
 .letter2 {
@@ -158,15 +160,12 @@ body {
   transition: color 0.3s ease;
   transform: scale(1.05);
 }
-.us-container {
-  margin-right: -43px;
-  padding-bottom: 65px;
-}
 
 .right-banner {
   position: relative;
   width: 50%;
   /* background-color: #fff4ec; */
+  background-color: #fff7f2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -174,15 +173,15 @@ body {
 }
 
 .map-bg {
-  width: 80%;
+  width: 85%;
   position: absolute;
   top: 16%;
   left: -8%;
   object-fit: cover;
   /* opacity: 0.15; */
 }
-.car-section {
-  height: 130px !important;
+.car-section > div {
+  height: 60px !important;
 }
 .car-image {
   position: relative;
@@ -191,83 +190,97 @@ body {
   z-index: 5;
   bottom: 148px;
 }
-
-/* ==============header-section-responsive ========*/
-
-/* Responsive */
-@media screen and (max-width: 991px) {
-  .navbar-collapse {
-    background-color: #000;
-    padding: 1rem;
-    border-radius: 15px;
-    text-align: center;
-    z-index: 999;
-  }
-
-  .navbar-nav .nav-link {
-    color: white !important;
-  }
-
-  body {
-    overflow-y: auto !important;
-  }
-  .heading-content > p {
-    font-size: 12px;
-  }
-  .heading-rvw {
-    text-align: center;
-  }
-  .navbar-collapse {
-    background-color: #000; /* Matches left banner color */
-    padding: 1rem;
-    border-radius: 15px;
-    z-index: 999;
-  }
-
-  .navbar-nav .nav-link {
-    color: white !important;
-  }
-
-  body.offcanvas-backdrop {
-    overflow-y: auto !important;
-  }
+/* touch-secton */
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding-bottom: 10px;
 }
 
-/* Carpoint Section */
-/* .about-section {
-  padding: 60px 0;
-} */
+.contact-icon {
+  background-color: #f6eff8;
+  border-radius: 28px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  height: 48px;
+}
 
-.about-heading {
-  color: #f5b800; /* Yellow color */
+.contact-icon i {
+  color: #ffc107;
+  font-size: 1.2rem;
+}
+
+.contact-details h6 {
+  margin-bottom: 5px;
   font-weight: 600;
-  font-size: 20px;
+  color: #333;
 }
 
-.about-title {
-  font-size: 28px;
-  font-weight: bold;
-  padding: 20px 0 44px 0;
+.contact-details p {
+  margin: 0;
+  color: #666;
+  line-height: 1.4;
+  font-size: 15px;
 }
 
-.about-text {
-  max-width: 437px;
-  min-height: 332px;
-  color: #555;
-  line-height: 1.7;
-  font-size: 13px;
-  text-align: justify;
-  margin: 0 10px 0 10px;
+.form-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.carpoint-para {
-  max-width: 668px;
-  font-size: 12px;
-  text-align: center;
-  margin: 0 auto;
+
+.form-control {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px 15px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease;
+  background-color: #f2f2f2;
 }
+
+.form-control:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+  border-color: #d39e00;
+  transform: translateY(-2px);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.section-description {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding-bottom: 97px;
+  font-size: 14px;
+}
+
 /* footer-section */
 .footer-cards > div {
-  height: 650px !important;
+  height: 500px !important;
 }
 .contact-card {
   background-color: #fdfdfd;
@@ -277,7 +290,7 @@ body {
   padding: 3rem;
   margin: 0 auto !important;
   position: relative;
-  top: 221px;
+  top: 62px;
   z-index: 4;
 }
 .btn-yellow {
@@ -350,7 +363,95 @@ body {
   border-radius: 5px;
 }
 
-/* Below 678px: white icons */
+/* responsive */
+@media screen and (max-width: 991px) {
+  .navbar-collapse {
+    background-color: #000;
+    padding: 1rem;
+    border-radius: 15px;
+    text-align: center;
+    z-index: 999;
+  }
+
+  .navbar-nav .nav-link {
+    color: white !important;
+  }
+
+  body {
+    overflow-y: auto !important;
+  }
+  .heading-content > p {
+    font-size: 12px;
+  }
+  .heading-rvw {
+    text-align: center;
+  }
+  .navbar-collapse {
+    background-color: #000; /* Matches left banner color */
+    padding: 1rem;
+    border-radius: 15px;
+    z-index: 999;
+  }
+
+  .navbar-nav .nav-link {
+    color: white !important;
+  }
+
+  body.offcanvas-backdrop {
+    overflow-y: auto !important;
+  }
+  .car-image {
+    max-width: 88%;
+    left: 4%;
+    bottom: 132px;
+  }
+  .footer-cards > div {
+    height: 700px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navbar-expand-lg .navbar-collapse {
+    margin-right: -30px !important;
+  }
+}
+@media (max-width: 1199px) {
+  .navbar-expand-lg .navbar-collapse {
+    margin-right: -74px !important;
+  }
+}
+@media (max-width: 1060px) {
+  .navbar-expand-lg .navbar-collapse {
+    margin-right: -53px !important;
+  }
+}
+@media (max-width: 1000px) {
+  .navbar-expand-lg .navbar-collapse {
+    margin-right: -44px !important;
+  }
+}
+
+@media screen and (max-width: 1145px) {
+  .map-bg {
+    width: 85%;
+    position: absolute;
+    top: 21%;
+    left: -3%;
+    object-fit: cover;
+    /* opacity: 0.15; */
+  }
+  .us-container {
+    margin-right: 15px;
+  }
+  .letter1 {
+    font-size: 88px !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .letter1 {
+    font-size: 75px !important;
+  }
+}
 @media screen and (max-width: 853px) {
   .navbar-toggler i {
     color: #fff !important;
@@ -363,6 +464,7 @@ body {
   }
 }
 
+/* banner-section */
 /* Banner-section-responsive */
 @media (max-width: 1083px) {
   .us-container {
@@ -375,16 +477,15 @@ body {
   }
   .car-image {
     position: relative;
-    max-width: 75%;
-    left: 13%;
+    max-width: 90%;
+    left: 2%;
     z-index: 5;
-    bottom: 135px;
+    top: -134px !important;
   }
   .map-bg {
-    width: 92%;
-    top: 18%;
-    left: 0%;
-    /* opacity: 0.15; */
+    width: 100%;
+    top: 21%;
+    left: -6%;
   }
 }
 @media (max-width: 991px) {
@@ -399,11 +500,6 @@ body {
   }
 }
 @media (max-width: 853px) {
-  /* #header > nav > div {
-    background-color: #9b2335;
-    border-radius: 50px;
-    padding: 5px 5px;
-  } */
   .left-banner,
   .right-banner {
     width: 100%;
@@ -422,13 +518,22 @@ body {
     left: 12%;
   }
   .car-section {
-    height: 184px !important;
+    height: 24px !important;
+  }
+  .map-bg {
+    width: 100%;
+    top: 8%;
+    left: -6%;
   }
 }
 @media (max-width: 730px) {
   .map-bg {
-    top: 25%;
-    left: 8%;
+    top: 10%;
+    left: -4%;
+  }
+  .car-image {
+    left: 2%;
+    top: -104px !important;
   }
 }
 @media (max-width: 947px) {
@@ -438,7 +543,7 @@ body {
 }
 @media (max-width: 573px) {
   .car-section {
-    height: 80px !important;
+    height: 1px !important;
   }
   .map-bg {
     top: 14%;
@@ -446,7 +551,6 @@ body {
   }
   .car-image {
     max-width: 75%;
-    top: -67%;
     left: 12%;
   }
   .right-banner {
@@ -486,10 +590,10 @@ body {
   .left-banner p {
     font-size: 0.8rem;
   }
-  /* .car-image {
-    top: -3%;
-    left: -6%;
-  } */
+  .car-image {
+    left: 2%;
+    top: -66px !important;
+  }
   .map-bg {
     width: 94%;
     position: absolute;
@@ -501,8 +605,11 @@ body {
   .right-banner {
     min-height: 261px !important;
   }
-  .car-image {
-    top: -332%;
+  .contact-card {
+    top: 8px !important;
+  }
+  .footer-cards > div {
+    height: 645px !important;
   }
 }
 /* about letter */
@@ -581,7 +688,114 @@ body {
     font-size: 9px;
   }
 }
-/* footer-section -responsive */
+@media screen and (max-width: 320px) {
+  .car-image {
+    left: 11%;
+    top: -55px !important;
+  }
+  .map-bg {
+    top: 18%;
+    left: -2%;
+  }
+  .py-5 {
+    padding-top: 1rem !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .section-description {
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 39px;
+  }
+
+  .contact-info-item {
+    margin-bottom: 30px;
+  }
+
+  .form-container {
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 526px) {
+  .contact-details p {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 498px) {
+  .contact-details p {
+    font-size: 13px;
+  }
+  .section-description {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 454px) {
+  .section-description {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 443px) {
+  .contact-details p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 423px) {
+  .section-description {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 416px) {
+  .contact-details p {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 392px) {
+  .section-description {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 388px) {
+  .contact-details p {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 362px) {
+  .section-description {
+    font-size: 9px;
+  }
+  .section-title {
+    font-size: 25px;
+    text-align: center;
+  }
+  .contact-details p {
+    font-size: 8px !important;
+  }
+  .py-5 {
+    padding-top: 2rem !important;
+  }
+}
+
+@media screen and (max-width: 388px) {
+  .contact-details p {
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 334px) {
+  .contact-details p {
+    font-size: 7px !important;
+  }
+  .section-description {
+    font-size: 9px;
+  }
+}
+
+/* footer-section */
 @media (max-width: 767px) {
   footer .col-md-4 {
     text-align: center;
@@ -631,14 +845,5 @@ body {
 @media screen and (max-width: 360px) {
   .contact-card {
     top: 57px !important;
-  }
-  .about-text {
-    max-width: 437px;
-    min-height: 211px;
-  }
-  .car-image {
-    max-width: 75%;
-    top: -325%;
-    left: 12%;
   }
 }
