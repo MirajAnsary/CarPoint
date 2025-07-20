@@ -1,0 +1,360 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.login-container {
+  min-height: 100vh !important;
+  display: flex;
+}
+
+.left-section {
+  background: #1f1f1f;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.vertical-text {
+  position: relative;
+  top: 11% !important;
+  left: -150px !important;
+  height: 600px !important;
+  color: #333;
+  white-space: nowrap;
+  z-index: 2;
+}
+.vertical-text > img {
+  object-fit: contain;
+  height: 92%;
+}
+
+.logo-container {
+  position: absolute;
+  bottom: 66%;
+  left: 56%;
+  transform: translateX(-50%);
+  z-index: 6;
+  width: 350px;
+}
+
+.logo {
+  display: block;
+  width: 100%;
+}
+
+.logo > img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.logo-icon {
+  border-radius: 50%;
+  /* display: flex;
+        align-items: center;
+        justify-content: center; */
+  /* color: black; */
+}
+
+.car-section > div {
+  min-height: 2px !important;
+}
+.car-image {
+  position: relative;
+  max-width: 65%;
+  left: -7%;
+  top: -450px;
+  z-index: 5;
+}
+
+.right-section {
+  background: white;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.login-form-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.welcome-text {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.login-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.login-subtitle {
+  color: #999;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.google-btn {
+  width: 100%;
+  background: #000;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background 0.3s ease;
+}
+
+.google-btn:hover {
+  background: #333;
+  color: white;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px 15px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+.password-container {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-check-input {
+  margin: 0;
+}
+
+.form-check-label {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+.forgot-password {
+  color: #ffc107;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.forgot-password:hover {
+  color: #e0a800;
+  text-decoration: underline;
+}
+
+.login-btn {
+  width: 40%;
+  background: #ffc107;
+  border: none;
+  color: #333;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #e0a800;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
+}
+
+.signup-text {
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.signup-link {
+  color: #ffc107;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-link:hover {
+  color: #e0a800;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1191px) {
+  .vertical-text {
+    top: 11% !important;
+    left: -106px !important;
+  }
+  .logo-container {
+    position: absolute;
+    bottom: 53%;
+    left: 56%;
+    transform: translateX(-50%);
+    z-index: 6;
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 1011px) {
+  .vertical-text {
+    top: 11% !important;
+    left: -66px !important;
+  }
+  .car-image {
+    position: relative;
+    max-width: 65%;
+    left: -6%;
+    top: -450px;
+    z-index: 5;
+  }
+}
+
+@media screen and (max-width: 966px) {
+  .vertical-text {
+    top: 6% !important;
+    left: -55px !important;
+  }
+  .logo-container {
+    position: absolute;
+    bottom: 56%;
+    left: 63%;
+    transform: translateX(-50%);
+    z-index: 6;
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 815px) {
+  .vertical-text {
+    top: 7% !important;
+    left: -19px !important;
+  }
+  .logo > img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .left-section {
+    min-height: 40vh;
+    padding: 1rem;
+  }
+
+  .vertical-text {
+    display: none;
+  }
+
+  .logo {
+    font-size: 2.5rem;
+  }
+
+  .car-image {
+    max-height: 200px;
+  }
+
+  .right-section {
+    min-height: 60vh;
+    padding: 1.5rem;
+  }
+
+  .login-title {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .logo-container {
+    position: absolute;
+    bottom: 80%;
+    left: 49%;
+  }
+  .car-image {
+    left: 18%;
+    top: -850px;
+  }
+}
+@media screen and (max-width: 475px) {
+  .logo-container {
+    position: absolute;
+    bottom: 78%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 6;
+    width: 350px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .left-section,
+  .car-section {
+    display: none;
+  }
+
+  .car-section > div {
+    height: 1px !important;
+  }
+}

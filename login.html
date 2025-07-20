@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+     <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./login.css">
+  </head>
+  <body>
+    <main class="login-container">
+      <!-- Left Section - Black Background with Logo and Car -->
+      <section class="col-md-6 left-section">
+        <div class="vertical-text">
+          <img src="../assets/CarPoint-White Logo 5.png" alt="" />
+        </div>
+
+        <div class="logo-container">
+          <a href="./index.html" class="logo">
+            <!-- <div class="logo-icon"> -->
+              <img src="../assets/car point6 logo.JPG" alt="">
+              </a>
+            </div>
+          
+          
+        </div>
+
+        <!-- <div class="car-container">
+        <img src="../assets/pngimg.com - land_rover_PNG80 2.png" alt="">
+        </div> -->
+      </section>
+
+      <!-- Right Section - Login Form -->
+      <section class="col-md-6 right-section">
+        <div class="login-form-container">
+          <div class="welcome-text">Hi, Welcome 👋</div>
+          <h1 class="login-title">Login</h1>
+          <p class="login-subtitle">
+            Lorem ipsum dolor sit amet consectetur volutpat eu.
+          </p>
+
+          <!-- Google Login Button -->
+          <!-- <button class="google-btn">
+            <i class="bi bi-google"></i>
+            Login with Google
+          </button> -->
+          <button class="btn btn-dark w-100 mb-3">
+            <img
+              src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+              width="20"
+              class="me-2"
+            />Login with Google
+          </button>
+
+          <!-- Divider -->
+          <!-- <div class="divider">or Login with Email</div> -->
+          <div class="d-flex align-items-center mb-3">
+            <hr class="flex-grow-1" />
+            <span class="mx-2 text-muted">or Login with Email</span>
+            <hr class="flex-grow-1" />
+          </div>
+
+          <!-- Login Form -->
+          <form id="loginForm">
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Enter Email Address"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <div class="password-container">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Enter Password"
+                  required
+                />
+                <button
+                  type="button"
+                  class="password-toggle"
+                  id="passwordToggle"
+                >
+                  <i class="bi bi-eye" id="passwordIcon"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Form Options -->
+            <div class="form-options">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="rememberMe"
+                />
+                <label class="form-check-label" for="rememberMe">
+                  Remember me
+                </label>
+              </div>
+              <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+
+            <!-- Login Button -->
+            <div class="text-center">
+              <button type="submit" class="login-btn">Login</button>
+            </div>
+          </form>
+
+          <!-- Sign Up Link -->
+          <p class="signup-text">
+            Don't have an account? <a href="#" class="signup-link">Sign Up</a>
+          </p>
+        </div>
+      </section>
+    </main>
+    <section class="car-section">
+      <div class="container">
+        <img src="../assets/pngimg.com - land_rover_PNG80 2.png" alt="" class="car-image">
+        </div>
+    </section>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./login-form.js"></script>
+  </body>
+</html>
