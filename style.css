@@ -821,4 +821,8 @@ body {
   .contact-card {
     top: 57px !important;
   }
+  .heading > p {
+    font-size: 7px;
+    margin-bottom: 5px !important;
+  }
 }

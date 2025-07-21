@@ -860,7 +860,7 @@ body {
 }
 @media screen and (max-width: 400px) {
   .heading-content2 > p {
-    font-size: 6px;
+    font-size: 5px;
   }
   .heading-content2 > h2 {
     font-size: 20px;
@@ -894,6 +894,7 @@ body {
 @media (max-width: 360px) {
   .left-banner {
     min-height: 365px !important;
+    padding-top: 172px;
   }
   .map-bg {
     width: 94%;
@@ -925,6 +926,9 @@ body {
   /* work-section */
   .text-muted2 {
     font-size: 7px;
+  }
+  .text-muted1 {
+    font-size: 9px;
   }
   .car-section > div {
     height: 1px !important;
@@ -973,9 +977,21 @@ body {
     padding-top: 1.5rem !important;
   }
   .review-card > p {
-    font-size: 10px;
+    font-size: 9px;
   }
   .text-white {
     font-size: 9px;
+  }
+  .text-muted2 {
+    font-size: 6px;
+  }
+  .text-muted1 {
+    font-size: 8px;
+  }
+  .heading-content2 > p {
+    font-size: 4px;
+  }
+  .right-para {
+    font-size: 11px;
   }
 }
