@@ -631,7 +631,7 @@ body {
   .right-banner {
     width: 100%;
     padding: 77px 2px;
-    height: auto;
+    min-height: 400px;
     text-align: center;
   }
 
@@ -656,16 +656,28 @@ body {
     font-size: 0.8rem;
   }
   .car-image {
-    top: 5%;
+    top: 21%;
     left: -6%;
   }
   .map-bg {
     width: 94%;
     position: absolute;
-    top: 16%;
+    top: 10%;
     left: -2%;
     object-fit: cover;
     /* opacity: 0.15; */
+  }
+  .search-label {
+    text-align: center;
+  }
+  .company {
+    padding-top: 24px;
+  }
+  .faster-cheack > div > h3 {
+    padding-bottom: 20px;
+  }
+  .Clients-section {
+    padding-top: 2px !important;
   }
 }
 @media (max-width: 700px) {
@@ -786,11 +798,6 @@ body {
   }
 }
 
-@media (max-width: 320px) {
-  .text-white {
-    font-size: 9px;
-  }
-}
 @media (max-width: 991.98px) {
   .right-cards {
     text-align: center; /* Center text */
@@ -824,5 +831,38 @@ body {
   .heading > p {
     font-size: 7px;
     margin-bottom: 5px !important;
+  }
+  .search-box {
+    max-width: 342px !important;
+    margin: 41px auto;
+    background-color: #f6f6f6;
+    border-radius: 20px;
+    padding: 25px 30px;
+    box-shadow: 2 8px 30px rgba(0, 0, 0, 0.1) !important;
+    position: relative;
+    top: -20px;
+  }
+  .search-input {
+    font-size: 9px;
+    padding: 8px;
+    justify-content: center;
+    text-align: center;
+  }
+  /* .right-banner {
+    height: 350px !important;
+  } */
+  .left-banner,
+  .right-banner {
+    width: 100%;
+    padding: 10px 2px;
+    text-align: center;
+  }
+  .right-banner {
+    min-height: 350px !important;
+  }
+}
+@media (max-width: 320px) {
+  .text-white {
+    font-size: 9px;
   }
 }
