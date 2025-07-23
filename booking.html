@@ -20,11 +20,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
       rel="stylesheet"
     />
-    <!-- AOS -->
-     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-      rel="stylesheet"
-    />
+ 
     <link rel="stylesheet" href="./booking.css" />
   </head>
   <body>
@@ -32,7 +28,7 @@
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
           <a class="navbar-brand" href="#">
-            <img src="../assets/car booking logo.JPG" alt="Logo" />
+            <img src="./assets/car booking logo.JPG" alt="Logo" />
           </a>
 
           <button
@@ -81,9 +77,7 @@
 
     
     <section class="banner-section"   
-      data-aos-delay="100"
-      data-aos-duration="1000"
-      data-aos="fade-up">
+   >
       <div class="banner-container">
         <div class="row align-items-center">     
 
@@ -97,15 +91,18 @@
     </h1>
   </div>
 </div>     
+
+
       </div>
     </section>
 
     <!-- search-box -->
-      <div class="container search-box"   
-      data-aos-delay="100"
-      data-aos-duration="1000"
-      data-aos="fade-up">
+      <section class="box-section ">
+        <div class="container ">
+                  <div class="search-box"> 
+
       <div class="row align-items-center g-3">
+        
         <div class="col-md-2 col-6">
           <div class="search-label">Location</div>
           <div class="search-input">
@@ -139,17 +136,987 @@
             Search <i class="bi bi-arrow-right ms-2"></i>
           </button>
         </div>
+        </div>
       </div>
     </div>
+      </section>
+    <!-- booking -->
+     <section class="booking-section"> 
+     <div class="container">
+      <div class="row">
+        <!-- Mobile Filter Toggle -->
+        <div class="col-12 d-md-none p-3">
+          <button class="mobile-filter-toggle" onclick="toggleMobileFilter()">
+            <i class="bi bi-funnel"></i>
+            Filters
+          </button>
+        </div>
+
+        <!-- Filter Overlay for Mobile -->
+        <div class="filter-overlay" onclick="closeMobileFilter()"></div>
+
+        <!-- Filter Panel -->
+        <aside class="col-md-3 col-lg-3 p-0 filter-panel" id="filterPanel">
+          <!-- Filter Header -->
+          <div
+            class="filter-header d-flex justify-content-between align-items-center"
+          >
+            <h2 class="filter-title">Filter</h2>
+            <a href="#" class="clear-all-btn" onclick="clearAllFilters()"
+              >Clear All</a
+            >
+          </div>
+
+          <!-- Kilometres Plan Section -->
+          <section class="filter-section">
+            <button
+              class="section-header w-100 text-start"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#kmSection"
+              aria-expanded="true"
+            >
+              <div class="section-title">
+                Kilometres Plan
+                <i class="bi bi-chevron-down"></i>
+              </div>
+            </button>
+            <div class="collapse show" id="kmSection">
+              <div class="section-content">
+                <div class="km-buttons">
+                  <button
+                    class="km-btn active"
+                    onclick="selectKmPlan(this, '140')"
+                  >
+                    140 Kms
+                  </button>
+                  <button class="km-btn" onclick="selectKmPlan(this, '280')">
+                    280 Kms
+                  </button>
+                  <button class="km-btn" onclick="selectKmPlan(this, '340')">
+                    340 Kms
+                  </button>
+                  <button class="km-btn" onclick="selectKmPlan(this, '480')">
+                    480 Kms
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Segment Section -->
+          <section class="filter-section">
+            <button
+              class="section-header w-100 text-start"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#segmentSection"
+              aria-expanded="true"
+            >
+              <div class="section-title">
+                Segment
+                <i class="bi bi-chevron-down"></i>
+              </div>
+            </button>
+            <div class="collapse show" id="segmentSection">
+              <fieldset class="section-content">
+                <legend class="visually-hidden">Vehicle Segment</legend>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="segment-all"
+                    onchange="handleSegmentFilter(this, 'All')"
+                  />
+                  <span class="checkmark"></span>
+                  <label for="segment-all" class="checkbox-label">All</label>
+                </div>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="segment-suv"
+                    onchange="handleSegmentFilter(this, 'SUV')"
+                  />
+                  <span class="checkmark"></span>
+                  <label for="segment-suv" class="checkbox-label">SUV</label>
+                </div>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="segment-sedan"
+                    onchange="handleSegmentFilter(this, 'Sedan')"
+                  />
+                  <span class="checkmark"></span>
+                  <label for="segment-sedan" class="checkbox-label"
+                    >Sedan</label
+                  >
+                </div>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="segment-muv"
+                    onchange="handleSegmentFilter(this, 'MUV')"
+                  />
+                  <span class="checkmark"></span>
+                  <label for="segment-muv" class="checkbox-label">MUV</label>
+                </div>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="segment-hatchback"
+                    onchange="handleSegmentFilter(this, 'Hatch Back')"
+                  />
+                  <span class="checkmark"></span>
+                  <label for="segment-hatchback" class="checkbox-label"
+                    >Hatch Back</label
+                  >
+                </div>
+              </fieldset>
+            </div>
+          </section>
+
+          <!-- Brand Section -->
+          <section class="filter-section">
+            <button
+              class="section-header w-100 text-start"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#brandSection"
+              aria-expanded="true"
+            >
+              <div class="section-title">
+                Brand
+                <i class="bi bi-chevron-down"></i>
+              </div>
+            </button>
+            <div class="collapse show" id="brandSection">
+              <fieldset class="section-content">
+                <legend class="visually-hidden">Car Brand</legend>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="brand-all"
+                    onchange="handleBrandFilter(this, 'All')"
+                  />
+                  <span class="checkmark"></span>
+                  <label for="brand-all" class="checkbox-label">All</label>
+                </div>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="brand-mahindra"
+                    onchange="handleBrandFilter(this, 'Mahindra')"
+                  />
+                  <span class="checkmark"></span>
+                  <label for="brand-mahindra" class="checkbox-label"
+                    >Mahindra</label
+                  >
+                </div>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="brand-tata"
+                    onchange="handleBrandFilter(this, 'TATA')"
+                  />
+                  <span class="checkmark"></span>
+                  <label for="brand-tata" class="checkbox-label">TATA</label>
+                </div>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="brand-hyundai"
+                    onchange="handleBrandFilter(this, 'Hyundai')"
+                  />
+                  <span class="checkmark"></span>
+                  <label for="brand-hyundai" class="checkbox-label"
+                    >Hyundai</label
+                  >
+                </div>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="brand-honda"
+                    onchange="handleBrandFilter(this, 'Honda')"
+                  />
+                  <span class="checkmark"></span>
+                  <label for="brand-honda" class="checkbox-label">Honda</label>
+                </div>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="brand-nissan"
+                    onchange="handleBrandFilter(this, 'Nissan')"
+                  />
+                  <span class="checkmark"></span>
+                  <label for="brand-nissan" class="checkbox-label"
+                    >Nissan</label
+                  >
+                </div>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="brand-ford"
+                    onchange="handleBrandFilter(this, 'Ford')"
+                  />
+                  <span class="checkmark"></span>
+                  <label for="brand-ford" class="checkbox-label">Ford</label>
+                </div>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="brand-landrover"
+                    onchange="handleBrandFilter(this, 'Land Rover')"
+                  />
+                  <span class="checkmark"></span>
+                  <label for="brand-landrover" class="checkbox-label"
+                    >Land Rover</label
+                  >
+                </div>
+                <a href="#" class="show-more-link" onclick="showMoreBrands()">
+                  <i class="bi bi-plus-circle"></i>
+                  +12 more
+                </a>
+              </fieldset>
+            </div>
+          </section>
+
+          <!-- Capacity Section -->
+          <section class="filter-section">
+            <button
+              class="section-header w-100 text-start"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#capacitySection"
+              aria-expanded="true"
+            >
+              <div class="section-title">
+                Capacity
+                <i class="bi bi-chevron-down"></i>
+              </div>
+            </button>
+            <div class="collapse show" id="capacitySection">
+              <fieldset class="section-content">
+                <legend class="visually-hidden">Seating Capacity</legend>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="capacity-2"
+                    onchange="handleCapacityFilter(this, '2 Person')"
+                  />
+                  <span class="checkmark"></span>
+                  <label for="capacity-2" class="checkbox-label"
+                    >2 Person</label
+                  >
+                </div>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="capacity-4"
+                    onchange="handleCapacityFilter(this, '4 Person')"
+                  />
+                  <span class="checkmark"></span>
+                  <label for="capacity-4" class="checkbox-label"
+                    >4 Person</label
+                  >
+                </div>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="capacity-6"
+                    onchange="handleCapacityFilter(this, '6 Person')"
+                  />
+                  <span class="checkmark"></span>
+                  <label for="capacity-6" class="checkbox-label"
+                    >6 Person</label
+                  >
+                </div>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="capacity-8plus"
+                    onchange="handleCapacityFilter(this, '8 Person & More')"
+                  />
+                  <span class="checkmark"></span>
+                  <label for="capacity-8plus" class="checkbox-label"
+                    >8 Person & More</label
+                  >
+                </div>
+              </fieldset>
+            </div>
+          </section>
+
+          <!-- Price Section -->
+          <section class="filter-section">
+            <button
+              class="section-header w-100 text-start"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#priceSection"
+              aria-expanded="true"
+            >
+              <div class="section-title">
+                Price
+                <i class="bi bi-chevron-down"></i>
+              </div>
+            </button>
+            <div class="collapse show" id="priceSection">
+              <div class="section-content">
+                <div class="price-range-container">
+                  <div class="price-labels">
+                    <div class="price-label">
+                      Min. ₹<span id="minPriceLabel">1000</span>
+                    </div>
+                    <div class="price-label">
+                      Max. ₹<span id="maxPriceLabel">10000</span>
+                    </div>
+                  </div>
+                  <div class="range-slider">
+                    <div class="range-track" id="rangeTrack"></div>
+                    <input
+                      type="range"
+                      class="range-input"
+                      id="minRange"
+                      min="1000"
+                      max="10000"
+                      value="1000"
+                      step="100"
+                      oninput="updatePriceRange()"
+                    />
+                    <input
+                      type="range"
+                      class="range-input"
+                      id="maxRange"
+                      min="1000"
+                      max="10000"
+                      value="10000"
+                      step="100"
+                      oninput="updatePriceRange()"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </aside>
+
+        <!-- Main Content Area (placeholder) -->
+        <main class="col-md-9 col-lg-9 p-4">
+          <section class="container my-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <p class="mb-0">
+                35 Car available for rent in Deshapriya Park Kolkata
+              </p>
+           
+              <div class="d-flex align-items-center justify-content-end">
+  <span class="me-2 text-muted">Sort by</span>
+  <button class="btn p-1 border-0 bg-transparent">
+    <img src="./assets/bookimg/Group (5).png" alt="Sort Icon" width="28" height="28" />
+  </button>
+</div>
+
+            </div>
+
+            <div class="row g-4 mb-4">
+              <!-- 1st car -->
+              <div class="col-12 col-md-6 col-lg-4">
+                <article class="car-card">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h6>Hyundai SUV</h6>
+                    <span class="text-danger fs-5">&#10084;</span>
+                  </div>
+                  <span class="badge bg-success mb-2">Available</span>
+                  <div class="image-section1-image1">
+                    <img
+                      src="./assets/Car Rental Projects  Booking/Hyundai SUV.png"
+                      alt="Hyundai SUV"
+                      class="car-image"
+                    />
+                  </div>
+                  <div class="car-info mb-2 text-muted">
+                    <p>
+                      <img
+                        src="./assets/bookimg/gas-station.png"
+                        alt=""
+                      />Diesel
+                      <img src="./assets/bookimg/Car.png" alt="" />
+                      Automatic
+                      <img src="./assets/bookimg/profile-2user.png" alt="" /> 7
+                      People
+                    </p>
+                    <p class="d-flex gap-3">
+                      <span>
+                        <img src="./assets/bookimg/Group (3).png" alt="" />
+                        Insurance Included
+                      </span>
+                      <span>
+                        <img src="./assets/bookimg/Group (4).png" alt="" /> 250
+                        Km/Day</span
+                      >
+                    </p>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <strong class="fs-5"
+                      >₹4800 <small class="text-muted">/ Day</small></strong
+                    >
+                    <button class="btn book-btn">Book Now</button>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Repeat for other cars -->
+              <!-- Example Second Car -->
+
+              <!-- 2nd car -->
+              <div class="col-12 col-md-6 col-lg-4">
+                <article class="car-card">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h6>Maruti Suzuki Dzire </h6>
+                    <span class="text-danger fs-5">&#10084;</span>
+                  </div>
+                  <span class="badge bg-success mb-2">Available</span>
+                  <div class="image2-section1">
+                    <img
+                      src="./assets/Car Rental Projects  Booking/Maruti Suzuki Dzire .png"
+                      alt="Maruti Suzuki Dzire "
+                      class="car-image"
+                    />
+                  </div>
+                  <div class="car-info mb-2 text-muted">
+                    <p>
+                      <img
+                        src="./assets/bookimg/gas-station.png"
+                        alt=""
+                      />Diesel
+                      <img src="./assets/bookimg/Car.png" alt="" />
+                      Automatic
+                      <img src="./assets/bookimg/profile-2user.png" alt="" /> 7
+                      People
+                    </p>
+                    <p class="d-flex gap-3">
+                      <span>
+                        <img src="./assets/bookimg/Group (3).png" alt="" />
+                        Insurance Included
+                      </span>
+                      <span>
+                        <img src="./assets/bookimg/Group (4).png" alt="" /> 250
+                        Km/Day</span
+                      >
+                    </p>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <strong class="fs-5"
+                      >₹4800 <small class="text-muted">/ Day</small></strong
+                    >
+                    <button class="btn book-btn">Book Now</button>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Example Third Car -->
+              <div class="col-12 col-md-6 col-lg-4">
+                <article class="car-card">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h6>Hyundai SUV</h6>
+                    <span class="text-danger fs-5">&#10084;</span>
+                  </div>
+                  <span class="badge bg-success mb-2">Available</span>
+                  <div class="image3-section1">
+                    <img
+                      src="./assets/Car Rental Projects  Booking/Range Rover.png"
+                      alt="Range Rover"
+                      class="car-image"
+                    />
+                  </div>
+                  <div class="car-info mb-2 text-muted">
+                    <p>
+                      <img
+                        src="./assets/bookimg/gas-station.png"
+                        alt=""
+                      />Diesel
+                      <img src="./assets/bookimg/Car.png" alt="" />
+                      Automatic
+                      <img src="./assets/bookimg/profile-2user.png" alt="" /> 7
+                      People
+                    </p>
+                    <p class="d-flex gap-3">
+                      <span>
+                        <img src="./assets/bookimg/Group (3).png" alt="" />
+                        Insurance Included
+                      </span>
+                      <span>
+                        <img src="./assets/bookimg/Group (4).png" alt="" /> 250
+                        Km/Day</span
+                      >
+                    </p>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <strong class="fs-5"
+                      >₹4800 <small class="text-muted">/ Day</small></strong
+                    >
+                    <button class="btn book-btn">Book Now</button>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+              <!-- 2nd row -->
+
+              <div class="row g-4 mb-4">
+                <!-- 1st car -->
+                <div class="col-12 col-md-6 col-lg-4">
+                  <article class="car-card">
+                    <div
+                      class="d-flex justify-content-between align-items-start"
+                    >
+                      <h5>Mahindra Xylo</h5>
+                      <span class="text-danger fs-5">&#10084;</span>
+                    </div>
+                    <span class="badge bg-success mb-2">Available</span>
+                    <div class="image1-section2">
+                      <img
+                      src="./assets/Car Rental Projects  Booking/Mahindra Xylo .png"
+                        alt="Mahindra Xylo "
+                        class="car-image"
+                      />
+                    </div>
+                    <div class="car-info mb-2 text-muted">
+                      <p>
+                        <img
+                          src="./assets/bookimg/gas-station.png"
+                          alt=""
+                        />Diesel
+                        <img src="./assets/bookimg/Car.png" alt="" />
+                        Automatic
+                        <img src="./assets/bookimg/profile-2user.png" alt="" />
+                        7 People
+                      </p>
+                      <p class="d-flex gap-3">
+                        <span>
+                          <img src="./assets/bookimg/Group (3).png" alt="" />
+                          Insurance Included
+                        </span>
+                        <span>
+                          <img src="./assets/bookimg/Group (4).png" alt="" />
+                          250 Km/Day</span
+                        >
+                      </p>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <strong class="fs-5"
+                        >₹4800 <small class="text-muted">/ Day</small></strong
+                      >
+                      <button class="btn book-btn">Book Now</button>
+                    </div>
+                  </article>
+                </div>
+
+                <!-- Repeat for other cars -->
+                <!-- Example Second Car -->
+
+                <!-- 2nd car -->
+                <div class="col-12 col-md-6 col-lg-4">
+                  <article class="car-card">
+                    <div
+                      class="d-flex justify-content-between align-items-start"
+                    >
+                      <h6>Mahindra XUV 3XO</h6>
+                      <span class="text-danger fs-5">&#10084;</span>
+                    </div>
+                    <span class="badge bg-success mb-2">Available</span>
+                    <div class="image2-section2">
+                      <img
+                        src="./assets/Car Rental Projects  Booking/Mahindra XUV 3XO.png"
+                        alt="Mahindra XUV 3XO"
+                        class="car-image"
+                      />
+                    </div>
+                    <div class="car-info mb-2 text-muted">
+                      <p>
+                        <img
+                          src="./assets/bookimg/gas-station.png"
+                          alt=""
+                        />Diesel
+                        <img src="./assets/bookimg/Car.png" alt="" />
+                        Automatic
+                        <img src="./assets/bookimg/profile-2user.png" alt="" />
+                        7 People
+                      </p>
+                      <p class="d-flex gap-3">
+                        <span>
+                          <img src="./assets/bookimg/Group (3).png" alt="" />
+                          Insurance Included
+                        </span>
+                        <span>
+                          <img src="./assets/bookimg/Group (4).png" alt="" />
+                          250 Km/Day</span
+                        >
+                      </p>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <strong class="fs-5"
+                        >₹4800 <small class="text-muted">/ Day</small></strong
+                      >
+                      <button class="btn book-btn">Book Now</button>
+                    </div>
+                  </article>
+                </div>
+
+                <!-- Example Third Car -->
+                <div class="col-12 col-md-6 col-lg-4">
+                  <article class="car-card">
+                    <div
+                      class="d-flex justify-content-between align-items-start"
+                    >
+                      <h6>Nissan  Datsun GO+</h6>
+                      <span class="text-danger fs-5">&#10084;</span>
+                    </div>
+                    <span class="badge bg-success mb-2">Available</span>
+                    <div class="image3-section2">
+                      <img
+                        src="./assets/Car Rental Projects  Booking/Nissan  Datsun GO+.png"
+                        alt="Nissan  Datsun GO+"
+                        class="car-image"
+                      />
+                    </div>
+                    <div class="car-info mb-2 text-muted">
+                      <p>
+                        <img
+                          src="./assets/bookimg/gas-station.png"
+                          alt=""
+                        />Diesel
+                        <img src="./assets/bookimg/Car.png" alt="" />
+                        Automatic
+                        <img src="./assets/bookimg/profile-2user.png" alt="" />
+                        7 People
+                      </p>
+                      <p class="d-flex gap-3">
+                        <span>
+                          <img src="./assets/bookimg/Group (3).png" alt="" />
+                          Insurance Included
+                        </span>
+                        <span>
+                          <img src="./assets/bookimg/Group (4).png" alt="" />
+                          250 Km/Day</span
+                        >
+                      </p>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <strong class="fs-5"
+                        >₹4800 <small class="text-muted">/ Day</small></strong
+                      >
+                      <button class="btn book-btn">Book Now</button>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <!-- 2n row end -->
+              <!-- 3rd-row-start -->
+
+              <div class="row g-4">
+                <!-- 1st car -->
+                <div class="col-12 col-md-6 col-lg-4">
+                  <article class="car-card">
+                    <div
+                      class="d-flex justify-content-between align-items-start"
+                    >
+                      <h6>Ford Focus </h6>
+                      <span class="text-danger fs-5">&#10084;</span>
+                    </div>
+                    <span class="badge bg-success mb-2">Available</span>
+                    <div class="image1-section3">
+                      <img
+                        src="./assets/Car Rental Projects  Booking/Ford Focus .png"
+                        alt="Ford Focus "
+                        class="car-image"
+                      />
+                    </div>
+                    <div class="car-info mb-2 text-muted">
+                      <p>
+                        <img
+                          src="./assets/bookimg/gas-station.png"
+                          alt=""
+                        />Diesel
+                        <img src="./assets/bookimg/Car.png" alt="" />
+                        Automatic
+                        <img src="./assets/bookimg/profile-2user.png" alt="" />
+                        7 People
+                      </p>
+                      <p class="d-flex gap-3">
+                        <span>
+                          <img src="./assets/bookimg/Group (3).png" alt="" />
+                          Insurance Included
+                        </span>
+                        <span>
+                          <img src="./assets/bookimg/Group (4).png" alt="" />
+                          250 Km/Day</span
+                        >
+                      </p>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <strong class="fs-5"
+                        >₹4800 <small class="text-muted">/ Day</small></strong
+                      >
+                      <button class="btn book-btn">Book Now</button>
+                    </div>
+                  </article>
+                </div>
+
+                <!-- Repeat for other cars -->
+                <!-- Example Second Car -->
+
+                <!-- 2nd car -->
+                <div class="col-12 col-md-6 col-lg-4">
+                  <article class="car-card">
+                    <div
+                      class="d-flex justify-content-between align-items-start"
+                    >
+                      <h6>TATA Nexon</h6>
+                      <span class="text-danger fs-5">&#10084;</span>
+                    </div>
+                    <span class="badge bg-success mb-2">Available</span>
+                    <div class="image2-section3">
+                      <img
+                        src="./assets/Car Rental Projects  Booking/TATA Nexon.png"
+                        alt="TATA Nexon"
+                        class="car-image"
+                      />
+                    </div>
+                    <div class="car-info mb-2 text-muted">
+                      <p>
+                        <img
+                          src="./assets/bookimg/gas-station.png"
+                          alt=""
+                        />Diesel
+                        <img src="./assets/bookimg/Car.png" alt="" />
+                        Automatic
+                        <img src="./assets/bookimg/profile-2user.png" alt="" />
+                        7 People
+                      </p>
+                      <p class="d-flex gap-3">
+                        <span>
+                          <img src="./assets/bookimg/Group (3).png" alt="" />
+                          Insurance Included
+                        </span>
+                        <span>
+                          <img src="./assets/bookimg/Group (4).png" alt="" />
+                          250 Km/Day</span
+                        >
+                      </p>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <strong class="fs-5"
+                        >₹4800 <small class="text-muted">/ Day</small></strong
+                      >
+                      <button class="btn book-btn">Book Now</button>
+                    </div>
+                  </article>
+                </div>
+
+                <!-- Example Third Car -->
+                <div class="col-12 col-md-6 col-lg-4">
+                  <article class="car-card">
+                    <div
+                      class="d-flex justify-content-between align-items-start"
+                    >
+                      <h6>Suzuki Ertiga</h6>
+                      <span class="text-danger fs-5">&#10084;</span>
+                    </div>
+                    <span class="badge bg-success mb-2">Available</span>
+                    <div class="image3-section3">
+                      <img
+                        src="./assets/Car Rental Projects  Booking/609-6092840_maruti-suzuki-ertiga-hd-png-download-removebg-preview 1.png"
+                        alt="Suzuki Ertiga"
+                        class="car-image"
+                      />
+                    </div>
+                    <div class="car-info mb-2 text-muted">
+                      <p>
+                        <img
+                          src="../assets/bookimg/gas-station.png"
+                          alt=""
+                        />Diesel
+                        <img src="../assets/bookimg/Car.png" alt="" />
+                        Automatic
+                        <img src="../assets/bookimg/profile-2user.png" alt="" />
+                        7 People
+                      </p>
+                      <p class="d-flex gap-3">
+                        <span>
+                          <img src="../assets/bookimg/Group (3).png" alt="" />
+                          Insurance Included
+                        </span>
+                        <span>
+                          <img src="../assets/bookimg/Group (4).png" alt="" />
+                          250 Km/Day</span
+                        >
+                      </p>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <strong class="fs-5"
+                        >₹4800 <small class="text-muted">/ Day</small></strong
+                      >
+                      <button class="btn book-btn">Book Now</button>
+                    </div>
+                  </article>
+                </div>
+              </div>
+
+              <!-- 3rd row-end -->
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+</section>
+    <!-- footer-section -->
+     <!-- footer section -->
+    <section
+      class="footer-cards"
+      data-aos-delay="100"
+      data-aos-duration="1000"
+      data-aos="fade-up"
+    >
+      <div class="container">
+        <div class="contact-card">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold">Questions? Get in Touch</h2>
+          </div>
+          <div class="row align-items-start">
+            <div class="col-lg-6 mb-4">
+              <form>
+                <input
+                  type="text"
+                  class="form-control mb-3"
+                  placeholder="Your Name*"
+                  required
+                />
+                <input
+                  type="email"
+                  class="form-control mb-3"
+                  placeholder="Your Email*"
+                  required
+                />
+                <textarea
+                  class="form-control mb-3"
+                  rows="4"
+                  placeholder="Your Message"
+                ></textarea>
+                <button type="submit" class="btn btn-yellow px-4 py-2">
+                  Send A Message
+                </button>
+              </form>
+            </div>
+            <div class="right-cards col-lg-6 mb-4">
+              <h5 class="fw-bold">
+                <span>Download</span>
+                <img
+                  src="./assets/my screen to.JPG"
+                  alt=""
+                  class="logo-image"
+                />
+                <br />
+                App for free
+              </h5>
+              <p class="text-muted">For easier, booking & easy deals</p>
+              <div class="app-badges">
+                <img
+                  src="./assets/black 1.png"
+                  alt="Google Play"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-4">
+            <img
+              src="./assets/all-car 1.png"
+              alt="Car Group"
+              class="img-fluid car-image2"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer-dark pt-5 pb-3">
+      <div class="container">
+        <div class="row text-center text-md-start">
+          <div class="col-md-4 mb-4 mx-auto">
+            <a href="#" class="d-block mx-auto mb-3" style="max-width: 180px">
+              <img src="./assets/screenshot 3.JPG" alt="" class="img-fluid" />
+            </a>
+            <p class="text-white">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text.
+            </p>
+            <div class="d-flex justify-content-center gap-3">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-x-twitter"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="col-md-2 mb-4">
+            <h6 class="fw-bold">Company</h6>
+            <ul class="list-unstyled">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="/about us.html">About us</a></li>
+              <li><a href="./booking.html">Booking</a></li>
+              <li><a href="./how it work.html">How It Works</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 mb-4">
+            <h6 class="fw-bold">Help</h6>
+            <ul class="list-unstyled">
+              <li><a href="#">Customer Support</a></li>
+              <li><a href="#">Terms & Condition</a></li>
+              <li><a href="#">Project</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h6 class="fw-bold">Subscribe To Newsletters</h6>
+            <form class="d-flex flex-column gap-3">
+              <input
+                type="email"
+                class="form-control subscribe-input bg-light"
+                placeholder="Enter your email"
+              />
+              <a class="btn-sc">Subscribe</a>
+            </form>
+          </div>
+        </div>
+        <hr class="text-warning" />
+        <div class="text-center">
+          <small>&copy; 2024 CarPoint All rights reserved.</small>
+        </div>
+      </div>
+    </footer>
+
   </body>
+             <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+
   <script src="./main.js"></script>
+  <script src="./booking.js"></script>
     <!-- AOS -->
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-       <script>
-        AOS.init({
-        once: true, // animation only once on scroll
-        offset: 100, // offset trigger
-      });
-       </script>
+    
 
 </html>
