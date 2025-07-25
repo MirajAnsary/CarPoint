@@ -257,6 +257,9 @@ body {
 .review-card > p {
   font-size: 12px;
 }
+.img-fluid {
+  margin-left: -36px;
+}
 /* .swiper-button-prev,
 .swiper-button-next {
   background: #f8f9fa;
@@ -287,6 +290,54 @@ body {
 .right-para {
   max-width: 450px;
   font-size: 14px;
+}
+/* // */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: #ffc107;
+  color: white;
+}
+.form-client {
+  max-width: 388px;
+  padding-top: 50px !important;
+}
+.form-control::placeholder {
+  color: #999;
+}
+.heading-star {
+  justify-content: space-between;
+}
+.heading-content > p {
+  font-size: 14px;
+}
+.right-para {
+  max-width: 450px;
+  font-size: 14px;
+}
+.testimonial-button-prev,
+.testimonial-button-next {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.testimonial-button-prev {
+  left: 50px;
+}
+
+.testimonial-button-next {
+  right: 50px;
+}
+
+.review-card {
+  background-color: #fff;
+  border-radius: 12px;
+}
+.testimonialSwiper > div > div {
+  max-width: 546px !important;
+  margin-right: 30px;
 }
 
 /* footer */
@@ -446,6 +497,9 @@ body {
 /* header-section */
 
 @media screen and (max-width: 991px) {
+  .testimonialSwiper > div > div {
+    margin-left: 75px;
+  }
   .navbar-collapse {
     background-color: #000;
     padding: 1rem;
@@ -602,6 +656,14 @@ body {
   }
 }
 @media screen and (max-width: 767px) {
+  .testimonialSwiper > div > div {
+    margin-left: 5px;
+  }
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+    margin-left: -36px;
+  }
   .text-muted1 {
     text-align: center;
   }
@@ -892,6 +954,20 @@ body {
 }
 
 @media (max-width: 360px) {
+  .testimonialSwiper > div > div {
+    margin-left: 0px;
+  }
+  .testimonial-button-prev {
+    left: 32px;
+  }
+  .testimonial-button-next {
+    right: 38px;
+  }
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+    margin-left: -28px;
+  }
   .left-banner {
     min-height: 365px !important;
     padding-top: 172px;
@@ -993,5 +1069,11 @@ body {
   }
   .right-para {
     font-size: 11px;
+  }
+  .testimonial-button-prev {
+    left: 3px;
+  }
+  .testimonial-button-next {
+    right: 3px;
   }
 }

@@ -321,12 +321,13 @@
             galley of type and scrambled it
           </p>
         </div>
+
         <div class="row align-items-center">
-          <!-- Left: Swiper Slider -->
-          <div class="col-lg-6 mb-4 mb-lg-0">
-            <div class="swiper mySwiper">
+          <div class="col-lg-6 mb-4 mb-lg-0 position-relative">
+            <div class="swiper testimonialSwiper">
               <div class="swiper-wrapper">
-                <div class="swiper-slide text-center">
+                <!-- card-1 -->
+                <div class="swiper-slide text-center d-flex flex-column">
                   <img
                     src="./assets/Rakesh  1.png"
                     class="img-fluid"
@@ -355,9 +356,51 @@
                   </div>
                 </div>
                 <!-- Add more slides if needed -->
+                <div class="swiper-slide text-center d-flex flex-column">
+                  <img
+                    src="./assets/Rakesh  1.png"
+                    class="img-fluid"
+                    alt="Client Image"
+                  />
+                  <div class="review-card mx-auto" style="max-width: 420px">
+                    <p class="text-muted mb-2 text-start">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book.
+                    </p>
+
+                    <div class="heading-star d-flex">
+                      <h6 class="mb-1">Rakesh Singh</h6>
+                      <span class="text-warning">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                      </span>
+                    </div>
+                    <p class="text-end">16 Reviews at Playstore</p>
+                  </div>
+                </div>
               </div>
               <!-- <div class="swiper-button-next"></div>
               <div class="swiper-button-prev"></div> -->
+              <div class="testimonial-button-prev">
+                <img
+                  src="./assets/ei_arrow-right (3).png"
+                  alt="Prev"
+                  width="30"
+                />
+              </div>
+              <div class="testimonial-button-next">
+                <img
+                  src="./assets/ei_arrow-right (2).png"
+                  alt="Next"
+                  width="30"
+                />
+              </div>
             </div>
           </div>
 
@@ -574,6 +617,7 @@
 
   <script src="./main.js"></script>
   <script src="./count.js"></script>
+  <script src="./testimonial.js"></script>
   <script>
     AOS.init({
       once: true, // animation only once on scroll

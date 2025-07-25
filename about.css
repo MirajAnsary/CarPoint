@@ -424,7 +424,11 @@ body {
   .car-section {
     height: 184px !important;
   }
+  .car-section {
+    height: 24px !important;
+  }
 }
+
 @media (max-width: 730px) {
   .map-bg {
     top: 25%;
