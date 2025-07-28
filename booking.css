@@ -144,7 +144,7 @@ body {
 }
 
 .search-box {
-  max-width: 1100px !important;
+  max-width: 1100px;
   margin: 40px auto;
   background-color: #f6f6f6;
   border-radius: 20px;
@@ -192,15 +192,13 @@ body {
 /* .booking-section {
   padding-top: 100px !important;
 } */
-
+/* filter-section */
 .filter-panel {
-  /* background: var(--dark-bg);
-        color: var(--text-white); */
   min-height: 724px !important;
   /* border-right: 1px solid var(--border-color); */
   position: relative;
   top: 0;
-  /* overflow-y: auto; */
+  overflow-y: auto;
   /* box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3); */
 }
 
@@ -212,12 +210,16 @@ body {
   top: 0;
   z-index: 100;
 }
+.filter-panel {
+  max-width: 201px !important;
+}
 
 .filter-title {
-  font-size: 1.5rem;
+  font-size: 16px;
   font-weight: 600;
   margin: 0;
   color: var(--primary-gold);
+  padding-top: 30px;
 }
 
 .clear-all-btn {
@@ -256,13 +258,14 @@ body {
 }
 
 .section-title {
-  font-size: 1.1rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--primary-gold);
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-block: 12px;
 }
 
 .section-content {
@@ -274,17 +277,18 @@ body {
 .km-buttons {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
+  gap: 1rem;
+  margin-bottom: 10px;
 }
 
 .km-btn {
   background: var(--darker-bg);
   border: 2px solid var(--border-color);
   color: var(--text-white);
-  padding: 0.75rem 1rem;
+  padding: 4px 6px 4px 1px;
   border-radius: 8px;
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 11px;
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: center;
@@ -299,6 +303,9 @@ body {
   background: var(--primary-gold);
   border-color: var(--primary-gold);
   color: #000;
+}
+.form-check {
+  font-size: 11px;
 }
 
 /* Custom Checkboxes */
@@ -380,9 +387,10 @@ body {
 
 .price-labels {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+  gap: 30px;
+  margin-bottom: 5px;
+  font-size: 8px;
 }
 
 .price-label {
@@ -397,9 +405,8 @@ body {
 .range-slider {
   position: relative;
   height: 6px;
-  background: var(--border-color);
+  background: var(--primary-gold);
   border-radius: 3px;
-  margin: 1.5rem 0;
 }
 
 .range-track {
@@ -541,51 +548,6 @@ body {
 .car-info p {
   font-size: 9px;
 }
-@media (max-width: 768px) {
-  .mobile-filter-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-
-  .filter-panel {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 85%;
-    max-width: 350px;
-    z-index: 1050;
-    transition: left 0.3s ease;
-    min-height: 100vh;
-  }
-
-  .filter-panel.show {
-    left: 0;
-  }
-
-  .filter-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1040;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-  }
-
-  .filter-overlay.show {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .km-buttons {
-    grid-template-columns: 1fr;
-  }
-}
 
 /* Collapse animations */
 .collapse {
@@ -719,6 +681,9 @@ body {
   .btn-search {
     font-size: 15px;
   }
+  .car-info p {
+    font-size: 6px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -763,6 +728,7 @@ body {
 @media (max-width: 1000px) {
   .search-box {
     max-width: 950px;
+    right: 0;
   }
 }
 
@@ -790,6 +756,7 @@ body {
 @media (max-width: 991px) {
   .search-box {
     padding: 15px;
+    top: -80px;
   }
 
   .search-label {
@@ -797,13 +764,14 @@ body {
   }
 
   .search-input {
-    font-size: 13px;
+    font-size: 6px;
     padding: 8px 10px;
   }
 
   .btn-search {
     width: 100%;
     margin-top: 10px;
+    font-size: 8px;
   }
 
   .col-md-2.col-12.d-flex {
@@ -823,7 +791,7 @@ body {
   }
 
   .search-input {
-    font-size: 12px;
+    font-size: 7px;
     padding: 8px;
     justify-content: center;
     text-align: center;
@@ -834,7 +802,7 @@ body {
   }
 
   .btn-search {
-    font-size: 14px;
+    font-size: 10px;
     padding: 8px 12px;
     width: 100%;
   }
@@ -872,6 +840,80 @@ body {
   }
   .contact-card {
     top: 46px;
+  }
+}
+/* filter */
+
+@media (max-width: 768px) {
+  /* Filter Toggle Button */
+  .mobile-filter-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  /* Filter Panel (sliding sidebar) */
+  .filter-panel {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 85%;
+    max-width: 350px;
+    height: 100vh;
+    overflow-y: auto;
+    background: var(--dark-bg, #fff);
+    z-index: 1050;
+    transition: left 0.3s ease;
+    padding: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .filter-panel.show {
+    left: 0;
+  }
+
+  /* Overlay Background */
+  .filter-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .filter-overlay.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* KM Buttons Stack Vertically */
+  .km-buttons {
+    display: grid;
+    grid-template-columns: fr;
+    gap: 1rem;
+    padding-inline: 10px;
+  }
+
+  /* Sticky Filter Header */
+  .filter-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    padding: 0 10px 0 10px;
+  }
+  .section-title {
+    padding-inline: 10px;
+  }
+  .form-check {
+    font-size: 11px;
+    padding-inline: 30px;
   }
 }
 
@@ -961,7 +1003,7 @@ body {
     font-size: 13px;
   }
   .search-box {
-    max-width: 342px !important;
+    max-width: 342px;
     margin: 41px auto;
     background-color: #f6f6f6;
     border-radius: 20px;
@@ -986,7 +1028,7 @@ body {
     margin-bottom: 5px !important;
   }
   .search-box {
-    max-width: 342px !important;
+    max-width: 342px;
     margin: 41px auto;
     background-color: #f6f6f6;
     border-radius: 20px;
@@ -1016,9 +1058,12 @@ body {
   .footer-cards > div {
     height: 623px !important;
   }
+  .car-info p {
+    font-size: 10px;
+  }
 }
-@media (max-width: 320px) {
-  .text-white {
+@media (max-width: 324px) {
+  .car-info p {
     font-size: 9px;
   }
 }
@@ -1027,5 +1072,8 @@ body {
   .banner-text {
     padding-left: 5%;
     top: 158%;
+  }
+  .text-white {
+    font-size: 9px;
   }
 }

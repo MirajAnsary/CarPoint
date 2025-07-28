@@ -432,15 +432,25 @@ body {
   .us-container {
     margin-right: -385px;
   }
-  .navbar-expand-lg .navbar-collapse {
+  /* .navbar-expand-lg .navbar-collapse {
     margin-right: -75px;
-  }
+  } */
 }
 /* why choose us */
 @media screen and (max-width: 1199.98px) {
   #why-choose-us .col-lg-5 {
     flex: 0 0 50%;
     max-width: 50%;
+  }
+  .navbar > div {
+    max-width: 1195px;
+  }
+}
+
+@media screen and (max-width: 1112px) {
+  .nav-item,
+  .btn {
+    font-size: 12px !important;
   }
 }
 @media (max-width: 1083px) {
@@ -465,9 +475,9 @@ body {
     top: 16%;
     z-index: 5;
   }
-  .navbar-expand-lg .navbar-collapse {
+  /* .navbar-expand-lg .navbar-collapse {
     margin-right: -47px;
-  }
+  } */
 }
 @media (max-width: 991.98px) {
   .right-cards {
@@ -559,6 +569,10 @@ body {
   }
   .footer-cards > div {
     height: 650px !important;
+  }
+  .nav-item,
+  .btn {
+    font-size: 16px !important;
   }
 }
 

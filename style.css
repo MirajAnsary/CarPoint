@@ -45,6 +45,7 @@ body {
 .navbar-nav {
   padding-top: 15px;
 }
+
 /* Logo */
 .navbar-brand {
   max-width: 150px;
@@ -90,7 +91,7 @@ body {
 /* Banner-section */
 
 /* .banner-section {
-  margin-top: 80px; Adjust based on header height
+  min-height: 100vh !important;
 } */
 
 .left-banner {
@@ -101,7 +102,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 450px;
+  height: 600px;
   width: 50%;
   /* margin-top: 25px; */
   padding: 10px 25px;
@@ -122,6 +123,7 @@ body {
 .left-banner p {
   margin-top: 15px;
   font-size: 1rem;
+  margin-left: -50px;
 }
 
 .btn {
@@ -133,28 +135,40 @@ body {
   position: relative;
   width: 50%;
   /* background-color: #fff4ec; */
+  background: url(./assets/WORLD\ MAP\ 1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 500px;
+  height: 600px;
   background-color: #fff7f2;
+  position: relative;
 }
+/* .map-image {
+  max-width: 928px;
+  width: 100%;
+} */
 
-.map-bg {
+/* .map-bg {
   width: 100%;
   position: absolute;
   top: 16%;
   left: -8%;
   object-fit: cover;
-  /* opacity: 0.15; */
+} */
+.banner-cars {
+  max-width: 774px;
+  width: 100%;
 }
-
 .car-image {
-  position: relative;
-  max-width: 90%;
-  top: 17%;
-  left: -10%;
+  position: absolute;
+  width: 90%;
+  top: 95px;
+  left: -4%;
   z-index: 2;
+  object-fit: contain;
 }
 /* =============search box ==============*/
 .box-section > div {
@@ -168,7 +182,7 @@ body {
   padding: 25px 30px;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
   position: relative;
-  top: -100px;
+  top: -90px;
 }
 
 .search-label {
@@ -606,13 +620,35 @@ body {
   .heading-secvices > p {
     font-size: 14px;
   }
+  .navbar > div {
+    max-width: 1195px;
+  }
 }
+@media screen and (max-width: 1142px) {
+  .car-image {
+    top: 156px;
+  }
+}
+
 @media screen and (max-width: 1112px) {
   .search-input {
     font-size: 12px;
   }
   .search-box {
     max-width: 950px !important;
+  }
+  .nav-item,
+  .btn {
+    font-size: 12px !important;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .left-banner,
+  .right-banner {
+    height: 461px;
+  }
+  .car-image {
+    top: 59px;
   }
 }
 @media (max-width: 991.98px) {
@@ -625,13 +661,17 @@ body {
   .search-input {
     font-size: 9px;
   }
-  .btn-search {
-    font-size: 9px;
+  #search1 {
+    font-size: 9px !important;
   }
   .search-box {
     width: 750px !important;
     top: -89px;
     right: 22px;
+  }
+  .nav-item,
+  .btn {
+    font-size: 16px !important;
   }
 }
 
@@ -688,11 +728,26 @@ body {
   .left-banner h1 {
     font-size: 2rem;
   }
+  .left-banner p {
+    margin-top: 15px;
+    font-size: 1rem;
+    margin-left: 24px;
+  }
 }
 @media (max-width: 947px) {
   .search-box {
     top: -89px;
     right: 48px;
+  }
+}
+@media (max-width: 826px) {
+  .left-banner p {
+    margin-top: 15px;
+    font-size: 15px;
+    margin-left: 9px;
+  }
+  .car-image {
+    top: 125px;
   }
 }
 @media (max-width: 817px) {
@@ -709,6 +764,7 @@ body {
     right: 20px;
   }
 }
+
 @media (max-width: 784px) {
   .btn-search {
     width: 100%;
@@ -759,7 +815,9 @@ body {
   }
 
   .car-image {
-    max-width: 75%;
+    max-width: 60%;
+    left: 21%;
+    top: 53px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -802,6 +860,11 @@ body {
   .form-client {
     margin-left: 71px;
   }
+  .car-image {
+    max-width: 60%;
+    left: 20%;
+    top: 110px;
+  }
 }
 
 /* faster */
@@ -817,10 +880,31 @@ body {
     height: 297px !important;
   }
 }
+@media screen and (max-width: 614px) {
+  .car-image {
+    max-width: 80%;
+    left: 6%;
+    top: 92px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .car-image {
+    max-width: 80%;
+    left: 6%;
+    top: 161px;
+  }
+}
 @media screen and (max-width: 447px) {
   .swiper-button-prev img,
   .swiper-button-next img {
     display: none !important;
+  }
+}
+@media screen and (max-width: 404px) {
+  .car-image {
+    max-width: 100%;
+    left: 6%;
+    top: 177px;
   }
 }
 @media screen and (max-width: 384px) {
@@ -1083,12 +1167,18 @@ body {
     font-size: 1.2rem;
   }
   .left-banner p {
-    font-size: 0.8rem;
+    font-size: 11px;
+    margin-left: 40px;
   }
   .car-image {
-    top: 21%;
-    left: -6%;
+    top: 27%;
+    left: 5%;
   }
+  .left-banner,
+  .right-banner {
+    height: 303px;
+  }
+
   .map-bg {
     width: 94%;
     position: absolute;
@@ -1202,5 +1292,14 @@ body {
   }
   .heading-para {
     font-size: 10px;
+  }
+  .left-banner p {
+    font-size: 10px;
+    margin-left: 21px;
+  }
+  .car-image {
+    max-width: 100%;
+    top: 35%;
+    left: 0%;
   }
 }

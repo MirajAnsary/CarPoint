@@ -409,27 +409,35 @@ body {
     height: 700px !important;
   }
 }
-
-@media (max-width: 1200px) {
+@media (max-width: 1246px) {
   .navbar-expand-lg .navbar-collapse {
-    margin-right: -30px !important;
+    margin-right: -35px !important;
   }
 }
 @media (max-width: 1199px) {
+  .navbar > div {
+    max-width: 1195px;
+  }
   .navbar-expand-lg .navbar-collapse {
-    margin-right: -74px !important;
+    margin-right: 0 !important;
   }
 }
-@media (max-width: 1060px) {
+@media screen and (max-width: 1165px) {
+  .nav-item,
+  .btn {
+    font-size: 12px !important;
+  }
+}
+/* @media (max-width: 1060px) {
   .navbar-expand-lg .navbar-collapse {
     margin-right: -53px !important;
   }
-}
-@media (max-width: 1000px) {
+} */
+/* @media (max-width: 1000px) {
   .navbar-expand-lg .navbar-collapse {
     margin-right: -44px !important;
   }
-}
+} */
 
 @media screen and (max-width: 1145px) {
   .map-bg {

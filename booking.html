@@ -65,7 +65,7 @@
                 <a class="nav-link" href="./login.html">Login</a>
               </li>
               <li class="nav-item">
-                <a class="btn btn-warning text-white ms-2" href="./sign in.html"
+                <a class="btn btn-warning  ms-2" style="color: white;" href="./sign in.html"
                   >Signup</a
                 >
               </li>
@@ -161,341 +161,250 @@
           <div
             class="filter-header d-flex justify-content-between align-items-center"
           >
-            <h2 class="filter-title">Filter</h2>
-            <a href="#" class="clear-all-btn" onclick="clearAllFilters()"
+            <h6 class="filter-title">Filter</h6>
+            <a href="#" class="clear-all-btn filter-title" onclick="clearAllFilters()"
               >Clear All</a
             >
           </div>
 
           <!-- Kilometres Plan Section -->
-          <section class="filter-section">
-            <button
-              class="section-header w-100 text-start"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#kmSection"
-              aria-expanded="true"
-            >
-              <div class="section-title">
-                Kilometres Plan
-                <i class="bi bi-chevron-down"></i>
-              </div>
-            </button>
-            <div class="collapse show" id="kmSection">
-              <div class="section-content">
-                <div class="km-buttons">
-                  <button
-                    class="km-btn active"
-                    onclick="selectKmPlan(this, '140')"
-                  >
-                    140 Kms
-                  </button>
-                  <button class="km-btn" onclick="selectKmPlan(this, '280')">
-                    280 Kms
-                  </button>
-                  <button class="km-btn" onclick="selectKmPlan(this, '340')">
-                    340 Kms
-                  </button>
-                  <button class="km-btn" onclick="selectKmPlan(this, '480')">
-                    480 Kms
-                  </button>
-                </div>
-              </div>
-            </div>
-          </section>
+          
+              <div class="filter-section">
+  <h4 class="section-title">Kilometres Plan</h4>
 
-          <!-- Segment Section -->
-          <section class="filter-section">
-            <button
-              class="section-header w-100 text-start"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#segmentSection"
-              aria-expanded="true"
-            >
-              <div class="section-title">
-                Segment
-                <i class="bi bi-chevron-down"></i>
-              </div>
-            </button>
-            <div class="collapse show" id="segmentSection">
-              <fieldset class="section-content">
-                <legend class="visually-hidden">Vehicle Segment</legend>
-                <div class="custom-checkbox">
-                  <input
-                    type="checkbox"
-                    id="segment-all"
-                    onchange="handleSegmentFilter(this, 'All')"
-                  />
-                  <span class="checkmark"></span>
-                  <label for="segment-all" class="checkbox-label">All</label>
-                </div>
-                <div class="custom-checkbox">
-                  <input
-                    type="checkbox"
-                    id="segment-suv"
-                    onchange="handleSegmentFilter(this, 'SUV')"
-                  />
-                  <span class="checkmark"></span>
-                  <label for="segment-suv" class="checkbox-label">SUV</label>
-                </div>
-                <div class="custom-checkbox">
-                  <input
-                    type="checkbox"
-                    id="segment-sedan"
-                    onchange="handleSegmentFilter(this, 'Sedan')"
-                  />
-                  <span class="checkmark"></span>
-                  <label for="segment-sedan" class="checkbox-label"
-                    >Sedan</label
-                  >
-                </div>
-                <div class="custom-checkbox">
-                  <input
-                    type="checkbox"
-                    id="segment-muv"
-                    onchange="handleSegmentFilter(this, 'MUV')"
-                  />
-                  <span class="checkmark"></span>
-                  <label for="segment-muv" class="checkbox-label">MUV</label>
-                </div>
-                <div class="custom-checkbox">
-                  <input
-                    type="checkbox"
-                    id="segment-hatchback"
-                    onchange="handleSegmentFilter(this, 'Hatch Back')"
-                  />
-                  <span class="checkmark"></span>
-                  <label for="segment-hatchback" class="checkbox-label"
-                    >Hatch Back</label
-                  >
-                </div>
-              </fieldset>
-            </div>
-          </section>
+  <form action="">
+    <div class="km-buttons">
+      <button type="button" class="km-btn active">
+        <div>
+          <input class="form-check-input" type="checkbox" id="km140" checked />
+          <label for="km140">140 Kms</label>
+        </div>
+      </button>
 
-          <!-- Brand Section -->
-          <section class="filter-section">
-            <button
-              class="section-header w-100 text-start"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#brandSection"
-              aria-expanded="true"
-            >
-              <div class="section-title">
-                Brand
-                <i class="bi bi-chevron-down"></i>
-              </div>
-            </button>
-            <div class="collapse show" id="brandSection">
-              <fieldset class="section-content">
-                <legend class="visually-hidden">Car Brand</legend>
-                <div class="custom-checkbox">
-                  <input
-                    type="checkbox"
-                    id="brand-all"
-                    onchange="handleBrandFilter(this, 'All')"
-                  />
-                  <span class="checkmark"></span>
-                  <label for="brand-all" class="checkbox-label">All</label>
-                </div>
-                <div class="custom-checkbox">
-                  <input
-                    type="checkbox"
-                    id="brand-mahindra"
-                    onchange="handleBrandFilter(this, 'Mahindra')"
-                  />
-                  <span class="checkmark"></span>
-                  <label for="brand-mahindra" class="checkbox-label"
-                    >Mahindra</label
-                  >
-                </div>
-                <div class="custom-checkbox">
-                  <input
-                    type="checkbox"
-                    id="brand-tata"
-                    onchange="handleBrandFilter(this, 'TATA')"
-                  />
-                  <span class="checkmark"></span>
-                  <label for="brand-tata" class="checkbox-label">TATA</label>
-                </div>
-                <div class="custom-checkbox">
-                  <input
-                    type="checkbox"
-                    id="brand-hyundai"
-                    onchange="handleBrandFilter(this, 'Hyundai')"
-                  />
-                  <span class="checkmark"></span>
-                  <label for="brand-hyundai" class="checkbox-label"
-                    >Hyundai</label
-                  >
-                </div>
-                <div class="custom-checkbox">
-                  <input
-                    type="checkbox"
-                    id="brand-honda"
-                    onchange="handleBrandFilter(this, 'Honda')"
-                  />
-                  <span class="checkmark"></span>
-                  <label for="brand-honda" class="checkbox-label">Honda</label>
-                </div>
-                <div class="custom-checkbox">
-                  <input
-                    type="checkbox"
-                    id="brand-nissan"
-                    onchange="handleBrandFilter(this, 'Nissan')"
-                  />
-                  <span class="checkmark"></span>
-                  <label for="brand-nissan" class="checkbox-label"
-                    >Nissan</label
-                  >
-                </div>
-                <div class="custom-checkbox">
-                  <input
-                    type="checkbox"
-                    id="brand-ford"
-                    onchange="handleBrandFilter(this, 'Ford')"
-                  />
-                  <span class="checkmark"></span>
-                  <label for="brand-ford" class="checkbox-label">Ford</label>
-                </div>
-                <div class="custom-checkbox">
-                  <input
-                    type="checkbox"
-                    id="brand-landrover"
-                    onchange="handleBrandFilter(this, 'Land Rover')"
-                  />
-                  <span class="checkmark"></span>
-                  <label for="brand-landrover" class="checkbox-label"
-                    >Land Rover</label
-                  >
-                </div>
-                <a href="#" class="show-more-link" onclick="showMoreBrands()">
-                  <i class="bi bi-plus-circle"></i>
-                  +12 more
-                </a>
-              </fieldset>
-            </div>
-          </section>
+      <button type="button" class="km-btn">
+        <div>
+          <input class="form-check-input" type="checkbox" id="km280" />
+          <label for="km280">280 Kms</label>
+        </div>
+      </button>
 
-          <!-- Capacity Section -->
-          <section class="filter-section">
-            <button
-              class="section-header w-100 text-start"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#capacitySection"
-              aria-expanded="true"
-            >
-              <div class="section-title">
-                Capacity
-                <i class="bi bi-chevron-down"></i>
-              </div>
-            </button>
-            <div class="collapse show" id="capacitySection">
-              <fieldset class="section-content">
-                <legend class="visually-hidden">Seating Capacity</legend>
-                <div class="custom-checkbox">
-                  <input
-                    type="checkbox"
-                    id="capacity-2"
-                    onchange="handleCapacityFilter(this, '2 Person')"
-                  />
-                  <span class="checkmark"></span>
-                  <label for="capacity-2" class="checkbox-label"
-                    >2 Person</label
-                  >
-                </div>
-                <div class="custom-checkbox">
-                  <input
-                    type="checkbox"
-                    id="capacity-4"
-                    onchange="handleCapacityFilter(this, '4 Person')"
-                  />
-                  <span class="checkmark"></span>
-                  <label for="capacity-4" class="checkbox-label"
-                    >4 Person</label
-                  >
-                </div>
-                <div class="custom-checkbox">
-                  <input
-                    type="checkbox"
-                    id="capacity-6"
-                    onchange="handleCapacityFilter(this, '6 Person')"
-                  />
-                  <span class="checkmark"></span>
-                  <label for="capacity-6" class="checkbox-label"
-                    >6 Person</label
-                  >
-                </div>
-                <div class="custom-checkbox">
-                  <input
-                    type="checkbox"
-                    id="capacity-8plus"
-                    onchange="handleCapacityFilter(this, '8 Person & More')"
-                  />
-                  <span class="checkmark"></span>
-                  <label for="capacity-8plus" class="checkbox-label"
-                    >8 Person & More</label
-                  >
-                </div>
-              </fieldset>
-            </div>
-          </section>
+      <button type="button" class="km-btn">
+        <div>
+          <input class="form-check-input" type="checkbox" id="km340" />
+          <label for="km340">340 Kms</label>
+        </div>
+      </button>
 
-          <!-- Price Section -->
-          <section class="filter-section">
-            <button
-              class="section-header w-100 text-start"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#priceSection"
-              aria-expanded="true"
-            >
-              <div class="section-title">
-                Price
-                <i class="bi bi-chevron-down"></i>
+      <button type="button" class="km-btn">
+        <div>
+          <input class="form-check-input" type="checkbox" id="km480" />
+          <label for="km480">480 Kms</label>
+        </div>
+      </button>
+    </div>
+  </form>
+</div>
+
+
+
+ <div class="filter-section">
+              <h4 class="section-title">Segment</h4>
+              <div class="form-check mb-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="segmentAll"
+                />
+                <label class="form-check-label" for="segmentAll">All</label>
               </div>
-            </button>
-            <div class="collapse show" id="priceSection">
-              <div class="section-content">
-                <div class="price-range-container">
-                  <div class="price-labels">
-                    <div class="price-label">
-                      Min. ₹<span id="minPriceLabel">1000</span>
-                    </div>
-                    <div class="price-label">
-                      Max. ₹<span id="maxPriceLabel">10000</span>
-                    </div>
-                  </div>
-                  <div class="range-slider">
-                    <div class="range-track" id="rangeTrack"></div>
-                    <input
-                      type="range"
-                      class="range-input"
-                      id="minRange"
-                      min="1000"
-                      max="10000"
-                      value="1000"
-                      step="100"
-                      oninput="updatePriceRange()"
-                    />
-                    <input
-                      type="range"
-                      class="range-input"
-                      id="maxRange"
-                      min="1000"
-                      max="10000"
-                      value="10000"
-                      step="100"
-                      oninput="updatePriceRange()"
-                    />
-                  </div>
+              <div class="form-check mb-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="segmentSUV"
+                />
+                <label class="form-check-label" for="segmentSUV">SUV</label>
+              </div>
+              <div class="form-check mb-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="segmentSedan"
+                />
+                <label class="form-check-label" for="segmentSedan">Sedan</label>
+              </div>
+              <div class="form-check mb-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="segmentMUV"
+                />
+                <label class="form-check-label" for="segmentMUV">MUV</label>
+              </div>
+              <div class="form-check mb-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="segmentHatch"
+                />
+                <label class="form-check-label" for="segmentHatch"
+                  >Hatch Back</label
+                >
+              </div>
+            </div>
+
+          
+          <div class="filter-section">
+              <h4 class="section-title">Brand</h4>
+              <div class="form-check mb-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="brandAll"
+                />
+                <label class="form-check-label" for="brandAll">All</label>
+              </div>
+              <div class="form-check mb-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="brandMahindra"
+                />
+                <label class="form-check-label" for="brandMahindra"
+                  >Mahindra</label
+                >
+              </div>
+              <div class="form-check mb-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="brandTATA"
+                />
+                <label class="form-check-label" for="brandTATA">TATA</label>
+              </div>
+              <div class="form-check mb-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="brandHyundai"
+                />
+                <label class="form-check-label" for="brandHyundai"
+                  >Hyundai</label
+                >
+              </div>
+              <div class="form-check mb-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="brandHonda"
+                />
+                <label class="form-check-label" for="brandHonda">Honda</label>
+              </div>
+              <div class="form-check mb-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="brandNissan"
+                />
+                <label class="form-check-label" for="brandNissan">Nissan</label>
+              </div>
+              <div class="form-check mb-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="brandFord"
+                />
+                <label class="form-check-label" for="brandFord">Ford</label>
+              </div>
+              <div class="form-check mb-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="brandLandRover"
+                />
+                <label class="form-check-label" for="brandLandRover"
+                  >Land Rover</label
+                >
+              </div>
+              <a href="#" class="more-link">+12 more</a>
+            </div>
+
+
+          
+          <div class="filter-section">
+              <h4 class="section-title">Capacity</h4>
+              <div class="form-check mb-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="capacity2"
+                />
+                <label class="form-check-label" for="capacity2">2 Person</label>
+              </div>
+              <div class="form-check mb-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="capacity4"
+                />
+                <label class="form-check-label" for="capacity4">4 person</label>
+              </div>
+              <div class="form-check mb-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="capacity6"
+                />
+                <label class="form-check-label" for="capacity6">6 Person</label>
+              </div>
+              <div class="form-check mb-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="capacity8"
+                />
+                <label class="form-check-label" for="capacity8"
+                  >8 Person & More</label
+                >
+              </div>
+            </div>
+
+
+          
+             <div class="filter-section">
+              <h4 class="section-title">Price</h4>
+              <div class="price-range">
+                <input
+                  type="range"
+                  min="1000"
+                  max="10000"
+                  value="5500"
+                  class="range-slider"
+                  id="priceRange"
+                />
+                <div class="price-labels">
+                  <span>Min. 1000</span>
+                  <span>Max. 10000</span>
                 </div>
               </div>
             </div>
-          </section>
         </aside>
 
         <!-- Main Content Area (placeholder) -->
@@ -514,17 +423,17 @@
 </div>
 
             </div>
-
+<!-- start -->
             <div class="row g-4 mb-4">
               <!-- 1st car -->
-              <div class="col-12 col-md-6 col-lg-4">
+              <div class=" col-12  col-sm-6  col-md-6 col-lg-4">
                 <article class="car-card">
                   <div class="d-flex justify-content-between align-items-start">
                     <h6>Hyundai SUV</h6>
                     <span class="text-danger fs-5">&#10084;</span>
                   </div>
                   <span class="badge bg-success mb-2">Available</span>
-                  <div class="image-section1-image1">
+                  <div class="image1-section1">
                     <img
                       src="./assets/Car Rental Projects  Booking/Hyundai SUV.png"
                       alt="Hyundai SUV"
@@ -568,7 +477,7 @@
               <!-- Example Second Car -->
 
               <!-- 2nd car -->
-              <div class="col-12 col-md-6 col-lg-4">
+              <div class="col-12  col-sm-6 col-md-6 col-lg-4">
                 <article class="car-card">
                   <div class="d-flex justify-content-between align-items-start">
                     <h6>Maruti Suzuki Dzire </h6>
@@ -616,10 +525,10 @@
               </div>
 
               <!-- Example Third Car -->
-              <div class="col-12 col-md-6 col-lg-4">
+              <div class=" col=12 col-sm-6 col-md-6 col-lg-4">
                 <article class="car-card">
                   <div class="d-flex justify-content-between align-items-start">
-                    <h6>Hyundai SUV</h6>
+                    <h6>Range Rover</h6>
                     <span class="text-danger fs-5">&#10084;</span>
                   </div>
                   <span class="badge bg-success mb-2">Available</span>
@@ -662,18 +571,13 @@
                   </div>
                 </article>
               </div>
-            </div>
-
-              <!-- 2nd row -->
-
-              <div class="row g-4 mb-4">
-                <!-- 1st car -->
-                <div class="col-12 col-md-6 col-lg-4">
+              <!-- car-4 -->
+               <div class="col-12 col-sm-6 col-md-6 col-lg-4">
                   <article class="car-card">
                     <div
                       class="d-flex justify-content-between align-items-start"
                     >
-                      <h5>Mahindra Xylo</h5>
+                      <h6>Mahindra Xylo</h6>
                       <span class="text-danger fs-5">&#10084;</span>
                     </div>
                     <span class="badge bg-success mb-2">Available</span>
@@ -716,12 +620,8 @@
                     </div>
                   </article>
                 </div>
-
-                <!-- Repeat for other cars -->
-                <!-- Example Second Car -->
-
-                <!-- 2nd car -->
-                <div class="col-12 col-md-6 col-lg-4">
+                <!-- car-5 -->
+                 <div class="col-12 col-sm-6 col-md-6 col-lg-4">
                   <article class="car-card">
                     <div
                       class="d-flex justify-content-between align-items-start"
@@ -769,9 +669,8 @@
                     </div>
                   </article>
                 </div>
-
-                <!-- Example Third Car -->
-                <div class="col-12 col-md-6 col-lg-4">
+                <!-- car-6 -->
+<div class="col-12 col-sm-6 col-md-6 col-lg-4">
                   <article class="car-card">
                     <div
                       class="d-flex justify-content-between align-items-start"
@@ -819,13 +718,8 @@
                     </div>
                   </article>
                 </div>
-              </div>
-              <!-- 2n row end -->
-              <!-- 3rd-row-start -->
-
-              <div class="row g-4">
-                <!-- 1st car -->
-                <div class="col-12 col-md-6 col-lg-4">
+                <!-- car-7 -->
+                  <div class=" col-12 col-sm-6 col-md-6 col-lg-4">
                   <article class="car-card">
                     <div
                       class="d-flex justify-content-between align-items-start"
@@ -873,12 +767,8 @@
                     </div>
                   </article>
                 </div>
-
-                <!-- Repeat for other cars -->
-                <!-- Example Second Car -->
-
-                <!-- 2nd car -->
-                <div class="col-12 col-md-6 col-lg-4">
+                <!-- car-8 -->
+                 <div class="col-12 col-sm-6 col-md-6 col-lg-4">
                   <article class="car-card">
                     <div
                       class="d-flex justify-content-between align-items-start"
@@ -926,9 +816,8 @@
                     </div>
                   </article>
                 </div>
-
-                <!-- Example Third Car -->
-                <div class="col-12 col-md-6 col-lg-4">
+                <!-- car-9 -->
+                 <div class="col-12 col-sm-6 col-md-6 col-lg-4">
                   <article class="car-card">
                     <div
                       class="d-flex justify-content-between align-items-start"
@@ -977,6 +866,13 @@
                   </article>
                 </div>
               </div>
+            </div>
+
+
+
+              
+
+               
 
               <!-- 3rd row-end -->
             </div>
