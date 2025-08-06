@@ -26,6 +26,48 @@ body {
   overflow: hidden !important;
   height: 100vh;
 }
+/* hover-effect */
+
+/* for-button */
+.btn {
+  /* width: 6.5em;
+  height: 2.3em; */
+  /* margin: 0.5em; */
+  /* background: black; */
+  /* color: white; */
+  /* border: none; */
+  /* border-radius: 0.625em; */
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btn:hover {
+  color: black !important;
+  background-color: #ffc107 !important;
+}
+
+.btn:after {
+  content: "";
+  background: white;
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+.btn:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* end */
 
 /* ================header-section================ */
 
@@ -364,16 +406,13 @@ body {
 .btn-yellow:hover {
   background-color: #e0a800;
 }
-.app-badges img {
-  width: 180px;
-  height: 120px;
-  margin-bottom: 10px;
-}
+
 .car-image2 {
-  max-height: 120px;
-  object-fit: contain;
+  max-width: 691px;
+  min-height: 138px;
   border-radius: 10px;
-  /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); */
+  position: relative;
+  left: 52px;
 }
 .text-white {
   font-size: 13px;
@@ -387,9 +426,13 @@ body {
   width: 100%;
 }
 
-.app-badges img {
-  width: 150px;
-  height: auto;
+.app-badges {
+  max-width: 150px;
+  margin-left: 25px;
+}
+.app-badges > img {
+  width: 100%;
+  object-fit: contain;
 }
 
 .footer-dark {
@@ -424,6 +467,9 @@ body {
   text-align: center;
   font-size: 14px;
   border-radius: 5px;
+}
+.img-footerlogo {
+  margin-left: 25px;
 }
 /* responsive */
 
@@ -495,9 +541,8 @@ body {
     width: 100%;
   }
 
-  .app-badges img {
-    width: 150px;
-    height: auto;
+  .car-image2 {
+    left: 0;
   }
   /* footer */
   .text-white {
@@ -692,6 +737,10 @@ body {
     justify-content: center;
     align-items: center;
   }
+  .img-footerlogo {
+    margin: 0 auto !important;
+    margin-bottom: 10px !important;
+  }
 }
 
 @media (max-width: 739px) {
@@ -843,7 +892,11 @@ body {
     padding-top: 0 !important;
   }
 }
-
+@media screen and (max-width: 477px) {
+  .car-image2 {
+    min-height: 67px;
+  }
+}
 /* Banner-section-responsive */
 
 @media (max-width: 474px) {
@@ -1037,6 +1090,9 @@ body {
   .contact-card {
     top: 57px !important;
   }
+  .contact-card {
+    padding: 1rem;
+  }
 }
 
 @media screen and (max-width: 353px) {
@@ -1070,7 +1126,7 @@ body {
     font-size: 9px;
   }
   .text-white {
-    font-size: 9px;
+    font-size: 8px;
   }
   .text-muted2 {
     font-size: 6px;

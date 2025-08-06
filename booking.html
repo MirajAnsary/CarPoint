@@ -65,7 +65,7 @@
                 <a class="nav-link" href="./login.html">Login</a>
               </li>
               <li class="nav-item">
-                <a class="btn btn-warning  ms-2" style="color: white;" href="./sign in.html"
+                <a class="btn btn-warning  ms-2 btn" style="color: white;" href="./sign in.html"
                   >Signup</a
                 >
               </li>
@@ -96,50 +96,106 @@
       </div>
     </section>
 
-    <!-- search-box -->
-      <section class="box-section ">
-        <div class="container ">
-                  <div class="search-box"> 
+      
 
-      <div class="row align-items-center g-3">
-        
-        <div class="col-md-2 col-6">
-          <div class="search-label">Location</div>
-          <div class="search-input">
-            <i class="bi bi-geo-alt"></i>
-            Choose a location
+    <section class="box-section">
+      <div class="container">
+        <form class="search-box">
+          <div class="row align-items-center g-3">
+            <!-- Location -->
+            <div class="col-md-2 col-6">
+              <label class="search-label" for="location">Location</label>
+              <div class=" d-flex align-items-center search-logo">
+                <i class="bi bi-geo-alt me-2"></i>
+                <input
+                  type="text"
+                  id="location"
+                  name="location"
+                  class="icon-content form-control search-input border-0 p-0"
+                  placeholder="Choose a location"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Pick-Up Date -->
+            <div class="col-md-3 col-6">
+              <label class="search-label" for="dateInput">Pick-Up Date</label>
+              <div
+                class=" d-flex align-items-center search-logo"
+                onclick="document.getElementById('dateInput').showPicker()"
+              >
+                <i class="bi bi-calendar-date me-2"></i>
+
+                <span id="formattedText" class="icon-content search-input"
+                  >Add a date & time</span
+                >
+                <input
+                  type="datetime-local"
+                  id="dateInput"
+                  onchange="formatDate(this)"
+                  name="pickup-date"
+                  class="icon-content form-control  search-input border-0 p-0"
+                  placeholder="Add a date & time"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Return Date -->
+            <div class="col-md-3 col-6">
+              <label class="search-label" for="dateInput">Return</label>
+              <div
+                class=" d-flex align-items-center search-logo"
+                onclick="document.getElementById('dateInput').showPicker()"
+              >
+                <i class="bi bi-calendar-date me-2"></i>
+
+                <span id="formattedText" class="icon-content search-input"
+                  >Add a date & time</span
+                >
+                <input
+                  type="datetime-local"
+                  id="dateInput"
+                  onchange="formatDate(this)"
+                  name="pickup-date"
+                  class="icon-content form-control search-input border-0 p-0"
+                  placeholder="Add a date & time"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Car Brand -->
+            <div class="col-md-2 col-6">
+              <label class="search-label" for="any">Car Brand</label>
+              <div class=" d-flex align-items-center search-logo">
+                <i class="bi bi-car-front me-2"></i>
+                <input
+                  type="datetime"
+                  name="any"
+                  id="any"
+                  class="icon-content form-control  search-input border-0 p-0"
+                  required
+                  placeholder="Any"
+                />
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="col-md-2 col-12 d-flex justify-content-md-end">
+              <button
+                type="submit"
+                class="btn btn-search w-md-auto"
+                id="search1"
+              >
+                Search <i class="bi bi-arrow-right ms-2"></i>
+              </button>
+            </div>
           </div>
-        </div>
-        <div class="col-md-3 col-6">
-          <div class="search-label">Pick -Up Date</div>
-          <div class="search-input">
-            <i class="bi bi-calendar-date"></i>
-            Add a date & time
-          </div>
-        </div>
-        <div class="col-md-3 col-6">
-          <div class="search-label">Return</div>
-          <div class="search-input">
-            <i class="bi bi-calendar-date"></i>
-            Add a date & time
-          </div>
-        </div>
-        <div class="col-md-2 col-6">
-          <div class="search-label">Car Brand</div>
-          <div class="search-input">
-            <i class="bi bi-car-front"></i>
-            Any
-          </div>
-        </div>
-        <div class="col-md-2 col-12 d-flex justify-content-md-end">
-          <button class="btn btn-search w-md-auto">
-            Search <i class="bi bi-arrow-right ms-2"></i>
-          </button>
-        </div>
-        </div>
+        </form>
       </div>
-    </div>
-      </section>
+    </section>
     <!-- booking -->
      <section class="booking-section"> 
      <div class="container">
@@ -410,16 +466,18 @@
         <!-- Main Content Area (placeholder) -->
         <main class="col-md-9 col-lg-9 p-4">
           <section class="container my-4">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <p class="mb-0">
+            <div class="d-flex justify-content-between align-items-center mb-3 booking-heading">
+              <p class="mb-0 booking-headingpara">
                 35 Car available for rent in Deshapriya Park Kolkata
               </p>
            
-              <div class="d-flex align-items-center justify-content-end">
-  <span class="me-2 text-muted">Sort by</span>
+              <div class="d-flex align-items-center justify-content-end sorted">
+                <form action="">
+  <label class="me-2 text-muted">Sort by</label>
   <button class="btn p-1 border-0 bg-transparent">
     <img src="./assets/bookimg/Group (5).png" alt="Sort Icon" width="28" height="28" />
   </button>
+  </form>
 </div>
 
             </div>
@@ -433,7 +491,7 @@
                     <span class="text-danger fs-5">&#10084;</span>
                   </div>
                   <span class="badge bg-success mb-2">Available</span>
-                  <div class="image1-section1">
+                  <div class="image1-section1  bookingcar-images">
                     <img
                       src="./assets/Car Rental Projects  Booking/Hyundai SUV.png"
                       alt="Hyundai SUV"
@@ -484,7 +542,7 @@
                     <span class="text-danger fs-5">&#10084;</span>
                   </div>
                   <span class="badge bg-success mb-2">Available</span>
-                  <div class="image2-section1">
+                  <div class="image2-section1 bookingcar-images">
                     <img
                       src="./assets/Car Rental Projects  Booking/Maruti Suzuki Dzire .png"
                       alt="Maruti Suzuki Dzire "
@@ -532,7 +590,7 @@
                     <span class="text-danger fs-5">&#10084;</span>
                   </div>
                   <span class="badge bg-success mb-2">Available</span>
-                  <div class="image3-section1">
+                  <div class="image3-section1 bookingcar-images">
                     <img
                       src="./assets/Car Rental Projects  Booking/Range Rover.png"
                       alt="Range Rover"
@@ -581,7 +639,7 @@
                       <span class="text-danger fs-5">&#10084;</span>
                     </div>
                     <span class="badge bg-success mb-2">Available</span>
-                    <div class="image1-section2">
+                    <div class="image1-section2 bookingcar-images">
                       <img
                       src="./assets/Car Rental Projects  Booking/Mahindra Xylo .png"
                         alt="Mahindra Xylo "
@@ -630,7 +688,7 @@
                       <span class="text-danger fs-5">&#10084;</span>
                     </div>
                     <span class="badge bg-success mb-2">Available</span>
-                    <div class="image2-section2">
+                    <div class="image2-section2 bookingcar-images">
                       <img
                         src="./assets/Car Rental Projects  Booking/Mahindra XUV 3XO.png"
                         alt="Mahindra XUV 3XO"
@@ -679,7 +737,7 @@
                       <span class="text-danger fs-5">&#10084;</span>
                     </div>
                     <span class="badge bg-success mb-2">Available</span>
-                    <div class="image3-section2">
+                    <div class="image3-section2 bookingcar-images">
                       <img
                         src="./assets/Car Rental Projects  Booking/Nissan  Datsun GO+.png"
                         alt="Nissan  Datsun GO+"
@@ -728,7 +786,7 @@
                       <span class="text-danger fs-5">&#10084;</span>
                     </div>
                     <span class="badge bg-success mb-2">Available</span>
-                    <div class="image1-section3">
+                    <div class="image1-section3 bookingcar-images">
                       <img
                         src="./assets/Car Rental Projects  Booking/Ford Focus .png"
                         alt="Ford Focus "
@@ -777,7 +835,7 @@
                       <span class="text-danger fs-5">&#10084;</span>
                     </div>
                     <span class="badge bg-success mb-2">Available</span>
-                    <div class="image2-section3">
+                    <div class="image2-section3 bookingcar-images">
                       <img
                         src="./assets/Car Rental Projects  Booking/TATA Nexon.png"
                         alt="TATA Nexon"
@@ -826,7 +884,7 @@
                       <span class="text-danger fs-5">&#10084;</span>
                     </div>
                     <span class="badge bg-success mb-2">Available</span>
-                    <div class="image3-section3">
+                    <div class="image3-section3 bookingcar-images">
                       <img
                         src="./assets/Car Rental Projects  Booking/609-6092840_maruti-suzuki-ertiga-hd-png-download-removebg-preview 1.png"
                         alt="Suzuki Ertiga"
@@ -932,19 +990,21 @@
               </h5>
               <p class="text-muted">For easier, booking & easy deals</p>
               <div class="app-badges">
-                <img
+               <a href="">
+                 <img
                   src="./assets/black 1.png"
                   alt="Google Play"
                   class="img-fluid"
                 />
+               </a>
               </div>
             </div>
           </div>
-          <div class="text-center mt-4">
+          <div class="car-image2 mt-4">
             <img
               src="./assets/all-car 1.png"
               alt="Car Group"
-              class="img-fluid car-image2"
+              class="img-fluid "
             />
           </div>
         </div>
@@ -955,18 +1015,22 @@
       <div class="container">
         <div class="row text-center text-md-start">
           <div class="col-md-4 mb-4 mx-auto">
-            <a href="#" class="d-block mx-auto mb-3" style="max-width: 180px">
+            <a href="#" class="d-block  mb-3 img-footerlogo" style="max-width: 180px">
               <img src="./assets/screenshot 3.JPG" alt="" class="img-fluid" />
             </a>
             <p class="text-white">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text.
             </p>
-            <div class="d-flex justify-content-center gap-3">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-x-twitter"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
+            <div class="d-flex  gap-3">
+           <a href="#">
+                <img src="./assets/icons/ic_baseline-facebook.png" alt="" />
+              </a>
+              <a href="#">
+                <img src="./assets/icons/mdi_instagram.png" alt="" />
+              </a>
+              <a href="#"> <img src="./assets/icons/prime_twitter.png" alt=""></a>
+              <a href="#"><img src="./assets/icons/mdi_youtube.png" alt=""></i></a>
             </div>
           </div>
           <div class="col-md-2 mb-4">
@@ -994,14 +1058,15 @@
                 type="email"
                 class="form-control subscribe-input bg-light"
                 placeholder="Enter your email"
+                required
               />
-              <a class="btn-sc">Subscribe</a>
+              <button type="submit" class="btn-sc btn">Subscribe</button>
             </form>
           </div>
         </div>
         <hr class="text-warning" />
         <div class="text-center">
-          <small>&copy; 2024 CarPoint All rights reserved.</small>
+          <small>&copy; 2024 <a href="">CarPoint</a> All rights reserved.</small>
         </div>
       </div>
     </footer>

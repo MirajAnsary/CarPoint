@@ -193,6 +193,7 @@
                     class="form-control"
                     id="fullName"
                     placeholder="Enter Full Name"
+                    required
                   />
                 </div>
 
@@ -205,6 +206,7 @@
                     class="form-control"
                     id="bookingId"
                     placeholder="Enter Booking ID"
+                    required
                   />
                 </div>
 
@@ -217,6 +219,7 @@
                     class="form-control"
                     id="emailAddress"
                     placeholder="Enter Email Address"
+                    required
                   />
                 </div>
 
@@ -229,6 +232,7 @@
                     id="description"
                     rows="4"
                     placeholder="Type here..."
+                    required
                   ></textarea>
                 </div>
 
@@ -315,18 +319,22 @@
       <div class="container">
         <div class="row text-center text-md-start">
           <div class="col-md-4 mb-4 mx-auto">
-            <a href="#" class="d-block mx-auto mb-3" style="max-width: 180px">
+            <a href="#" class="d-block mb-3 img-footerlogo" style="max-width: 180px">
               <img src="./assets/screenshot 3.JPG" alt="" class="img-fluid" />
             </a>
-            <p class="text-white">
+            <p class="text-white footer-par">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text.
             </p>
-            <div class="d-flex justify-content-center gap-3">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-x-twitter"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
+            <div class="d-flex  gap-3">
+          <a href="#">
+                <img src="./assets/icons/ic_baseline-facebook.png" alt="" />
+              </a>
+              <a href="#">
+                <img src="./assets/icons/mdi_instagram.png" alt="" />
+              </a>
+              <a href="#"> <img src="./assets/icons/prime_twitter.png" alt=""></a>
+              <a href="#"><img src="./assets/icons/mdi_youtube.png" alt=""></i></a>
             </div>
           </div>
           <div class="col-md-2 mb-4">
@@ -354,14 +362,17 @@
                 type="email"
                 class="form-control subscribe-input bg-light"
                 placeholder="Enter your email"
+                required
               />
-              <a class="btn-sc">Subscribe</a>
+              <button type="submit" class="btn-sc btn">Subscribe</button>
             </form>
           </div>
         </div>
         <hr class="text-warning" />
         <div class="text-center">
-          <small>&copy; 2024 CarPoint All rights reserved.</small>
+          <small
+            >&copy; 2024 <a href="">CarPoint</a> All rights reserved.</small
+          >
         </div>
       </div>
     </footer>

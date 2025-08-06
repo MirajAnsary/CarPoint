@@ -26,6 +26,48 @@ body {
   overflow: hidden !important;
   height: 100vh;
 }
+/* hover-effect */
+
+/* for-button */
+.btn {
+  /* width: 6.5em;
+  height: 2.3em; */
+  /* margin: 0.5em; */
+  /* background: black; */
+  /* color: white; */
+  /* border: none; */
+  /* border-radius: 0.625em; */
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btn:hover {
+  color: black !important;
+  background-color: #ffc107 !important;
+}
+
+.btn:after {
+  content: "";
+  background: white;
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+.btn:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* end */
 
 /* ================header-section================ */
 
@@ -234,6 +276,14 @@ body {
   text-align: center;
   margin: 0 auto;
 }
+.about-image {
+  max-width: 625px;
+  width: 100%;
+}
+.about-image > img {
+  width: 100%;
+  object-fit: contain;
+}
 /* footer-section */
 .footer-cards > div {
   height: 650px !important;
@@ -263,10 +313,15 @@ body {
   margin-bottom: 10px;
 }
 .car-image2 {
-  max-height: 120px;
+  max-width: 691px;
+  min-height: 138px;
+  width: 100%;
+  position: relative;
+  left: 52px;
+}
+.car-image2 > img {
+  width: 100%;
   object-fit: contain;
-  border-radius: 10px;
-  /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); */
 }
 .text-white {
   font-size: 13px;
@@ -377,6 +432,9 @@ body {
     border-radius: 15px;
     text-align: center;
     z-index: 999;
+  }
+  .car-image2 {
+    left: 0px;
   }
 
   .navbar-nav .nav-link {
@@ -518,6 +576,10 @@ body {
   .about-section {
     padding-top: 30px;
   }
+  .img-footerlogo {
+    margin: 0 auto !important;
+    margin-bottom: 10px !important;
+  }
 }
 @media (max-width: 730px) {
   .map-bg {
@@ -582,6 +644,12 @@ body {
     font-size: 9px;
   }
 }
+@media (max-width: 428px) {
+  .car-image2 {
+    min-height: 50px;
+  }
+}
+
 @media (max-width: 402px) {
   .carpoint-para {
     font-size: 7px;
@@ -626,6 +694,12 @@ body {
     padding-top: 20px;
     height: 333px;
   }
+  .contact-card {
+    padding: 1rem;
+  }
+  .text-white {
+    font-size: 9px;
+  }
 }
 @media (max-width: 358px) {
   .carpoint-para {
@@ -634,8 +708,9 @@ body {
 }
 @media (max-width: 320px) {
   .text-white {
-    font-size: 9px;
+    font-size: 8px;
   }
 }
 
 /*==================== resonsove end=============================== */
+/* hover */

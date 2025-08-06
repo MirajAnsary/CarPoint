@@ -26,6 +26,48 @@ body {
   overflow: hidden !important;
   height: 100vh;
 }
+/* hover-effect */
+
+/* for-button */
+.btn {
+  /* width: 6.5em;
+  height: 2.3em; */
+  /* margin: 0.5em; */
+  /* background: black; */
+  /* color: white; */
+  /* border: none; */
+  /* border-radius: 0.625em; */
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btn:hover {
+  color: black !important;
+  background-color: #ffc107 !important;
+}
+
+.btn:after {
+  content: "";
+  background: white;
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+.btn:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* end */
 
 /* ================header-section================ */
 
@@ -146,18 +188,7 @@ body {
   background-color: #fff7f2;
   position: relative;
 }
-/* .map-image {
-  max-width: 928px;
-  width: 100%;
-} */
 
-/* .map-bg {
-  width: 100%;
-  position: absolute;
-  top: 16%;
-  left: -8%;
-  object-fit: cover;
-} */
 .banner-cars {
   max-width: 774px;
   width: 100%;
@@ -215,6 +246,43 @@ body {
 .btn-search:hover {
   background-color: #f59e0b;
   color: #fff;
+}
+
+/* // */
+/* .search-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+} */
+
+.search-input {
+  /* border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 12px;
+      background: white; */
+  position: relative;
+}
+.icon-content {
+  color: #6c757d;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+  max-width: 150px;
+}
+#dateInput {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+#formattedText {
+  pointer-events: none;
+  color: #6c757d;
 }
 
 /* =======================================Faster Cheack out============================================== */
@@ -537,11 +605,16 @@ body {
   height: 120px;
   margin-bottom: 10px;
 }
+.car-top {
+  max-width: 691px;
+  min-height: 138px;
+  position: relative;
+  left: 51px;
+}
 .car-image2 {
-  max-height: 120px;
+  width: 100%;
   object-fit: contain;
   border-radius: 10px;
-  /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); */
 }
 .text-white {
   font-size: 13px;
@@ -592,6 +665,9 @@ body {
   text-align: center;
   font-size: 14px;
   border-radius: 5px;
+}
+.img-footerlogo {
+  margin-left: 25px;
 }
 /* Default (large screen): black icons */
 .navbar-toggler i {
@@ -672,6 +748,9 @@ body {
   .nav-item,
   .btn {
     font-size: 16px !important;
+  }
+  .car-top {
+    left: -1px;
   }
 }
 
@@ -762,6 +841,12 @@ body {
     width: 740px !important;
     top: -89px;
     right: 20px;
+  }
+  #search1 {
+    font-size: 8px !important;
+  }
+  .icon-content {
+    font-size: 10px;
   }
 }
 
@@ -865,6 +950,13 @@ body {
     left: 20%;
     top: 110px;
   }
+  #search1 {
+    font-size: 12px !important;
+  }
+  .img-footerlogo {
+    margin: 0 auto !important;
+    margin-bottom: 10px !important;
+  }
 }
 
 /* faster */
@@ -905,6 +997,12 @@ body {
     max-width: 100%;
     left: 6%;
     top: 177px;
+  }
+}
+@media screen and (max-width: 386px) {
+  .car-top {
+    max-width: 691px;
+    min-height: 105px;
   }
 }
 @media screen and (max-width: 384px) {
@@ -1123,6 +1221,7 @@ body {
 .app-badges img {
   width: 150px;
   height: auto;
+  margin-left: 23px;
 }
 /* footer */
 .text-white {
@@ -1201,6 +1300,7 @@ body {
   }
   .contact-card {
     top: 57px !important;
+    padding: 1rem;
   }
   .heading > p {
     font-size: 10px;
@@ -1246,7 +1346,7 @@ body {
   .img-fluid {
     max-width: 100%;
     height: auto;
-    margin-left: -28px;
+    margin-left: -3px;
   }
   #why-choose-us {
     padding-top: 35px !important;
