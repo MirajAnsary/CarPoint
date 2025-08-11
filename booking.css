@@ -733,6 +733,15 @@ body {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
+/* logo-hover */
+.logo-icon img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo-icon:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.2); /* Optional: makes it glow a bit */
+}
 /* end */
 /* Responsive */
 @media screen and (max-width: 1200px) {

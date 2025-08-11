@@ -669,6 +669,19 @@ body {
 .img-footerlogo {
   margin-left: 25px;
 }
+.nav-btn {
+  padding-top: 15px;
+}
+
+/* logo hover */
+.logo-icon img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo-icon:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.2); /* Optional: makes it glow a bit */
+}
 /* Default (large screen): black icons */
 .navbar-toggler i {
   font-size: 26px;
@@ -790,6 +803,12 @@ body {
   }
   .right-para {
     margin-left: 141px;
+  }
+  .nav-btn {
+    gap: 20px;
+  }
+  .login-class {
+    color: white !important;
   }
 }
 @media (max-width: 960px) {

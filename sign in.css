@@ -11,6 +11,8 @@ body {
   overflow-x: hidden;
   font-family: "Poppins";
 }
+
+/* // */
 .signup-container {
   min-height: 100vh;
   display: flex;
@@ -61,9 +63,6 @@ body {
   object-fit: contain;
 }
 
-.car-section > div {
-  min-height: 2px !important;
-}
 .car-image {
   position: relative;
   max-width: 65%;
@@ -241,6 +240,9 @@ body {
 .is-invalid {
   border-color: #dc3545;
 }
+/* .car-section > div {
+  max-width: 100px !important;
+} */
 @media (max-width: 1172px) {
   .car-image {
     left: -10%;

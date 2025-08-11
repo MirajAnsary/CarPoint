@@ -373,6 +373,15 @@ body {
   font-size: 14px;
   border-radius: 5px;
 }
+/* logo hover */
+.logo-icon img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo-icon:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.2); /* Optional: makes it glow a bit */
+}
 
 /* Below 678px: white icons */
 @media screen and (max-width: 1199.98px) {
