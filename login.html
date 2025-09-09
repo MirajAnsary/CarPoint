@@ -24,6 +24,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+     <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./login.css">
   </head>
   <body>
@@ -203,12 +207,21 @@
     </main>
     <section class="car-section">
       <div class="container">
-        <img src="./assets/pngimg.com - land_rover_PNG80 2.png" alt="" class="car-image">
+        <img src="./assets/pngimg.com - land_rover_PNG80 2.png" alt="" class="car-image" data-aos="zoom-in" 
+               data-aos-delay="500"
+               data-aos-duration="1000">
         </div>
     </section>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
     <script src="./login-form.js"></script>
     <script src="main.js"></script>
+    <script>
+    AOS.init({
+      once: true, // animation only once on scroll
+      offset: 100, // offset trigger
+    });
+</script>    
   </body>
 </html>
