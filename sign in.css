@@ -312,6 +312,17 @@ body {
 /* .car-section > div {
   max-width: 100px !important;
 } */
+/* Custom Scrollbar (works in Chrome, Edge, Safari, Firefox) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #d1e5ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#7fffd4, #b8860b);
+}
 @media screen and (max-width: 1199px) {
   .navbar > div {
     max-width: 1195px;

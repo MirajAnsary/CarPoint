@@ -383,6 +383,17 @@ body {
   filter: brightness(1.2); /* Optional: makes it glow a bit */
 }
 
+/* Custom Scrollbar (works in Chrome, Edge, Safari, Firefox) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #d1e5ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#7fffd4, #b8860b);
+}
 /* Below 678px: white icons */
 @media screen and (max-width: 1199.98px) {
   .navbar > div {
